@@ -1,0 +1,8 @@
+# Netlify-style redirects for SPA routing
+# This ensures all routes serve the React app
+
+# API routes (if any) - handle first
+/api/*  /api/:splat  200
+
+# All other routes should serve the React app
+/*  /index.html  200
