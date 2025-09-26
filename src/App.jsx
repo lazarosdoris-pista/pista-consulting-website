@@ -426,7 +426,11 @@ function App() {
             <a href="#solution" className="transition-colors hover:text-red-600">Lösung</a>
             <a href="#success" className="transition-colors hover:text-red-600">Erfolg</a>
             <a href="#pricing" className="transition-colors hover:text-red-600">Preise</a>
-            <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white">
+            <Button 
+              size="sm" 
+              className="bg-red-600 hover:bg-red-700 text-white"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Einsparpotenzial berechnen
             </Button>
           </nav>
@@ -477,7 +481,11 @@ function App() {
           </p>
 
           <div className="mb-8">
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-xl px-12 py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all">
+            <Button 
+              size="lg" 
+              className="bg-red-600 hover:bg-red-700 text-white text-xl px-12 py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Kostenloses Einsparpotenzial berechnen
               <ArrowRight className="ml-3 w-6 h-6" />
             </Button>
@@ -572,7 +580,11 @@ function App() {
             <p className="text-lg text-slate-700 mb-6">
               <strong>Das Ergebnis:</strong> Ihre Konkurrenz überholt Sie, während Sie noch mit veralteten Systemen kämpfen.
             </p>
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
+            <Button 
+              size="lg" 
+              className="bg-red-600 hover:bg-red-700 text-white"
+              onClick={() => document.getElementById('solution')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Ich will das ändern - Lösung zeigen
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
@@ -1109,7 +1121,7 @@ function App() {
       </section>
 
       {/* Lead Form */}
-      <section className="py-12 md:py-20 px-4 sm:px-6 bg-slate-50">
+      <section id="contact-form" className="py-12 md:py-20 px-4 sm:px-6 bg-slate-50">
         <div className="container mx-auto">
           <div className="max-w-2xl mx-auto">
             <Card className="p-6 md:p-8">
