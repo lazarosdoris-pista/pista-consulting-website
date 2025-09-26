@@ -657,7 +657,11 @@ function App() {
                 </div>
               </div>
             </div>
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white w-full">
+            <Button 
+              size="lg" 
+              className="bg-red-600 hover:bg-red-700 text-white w-full"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Kostenloses Einsparpotenzial berechnen
               <Calculator className="ml-2 w-5 h-5" />
             </Button>
@@ -740,7 +744,11 @@ function App() {
               </div>
 
               <div className="text-center mt-8">
-                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-4">
+                <Button 
+                  size="lg" 
+                  className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-4"
+                  onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                >
                   Kostenlose Detailanalyse anfordern
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -800,7 +808,10 @@ function App() {
                     </div>
 
                     <div className="mt-6">
-                      <Button className="bg-red-600 hover:bg-red-700 text-white">
+                      <Button 
+                        className="bg-red-600 hover:bg-red-700 text-white"
+                        onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                      >
                         <Play className="w-4 h-4 mr-2" />
                         Vollständige Erfolgsgeschichte ansehen
                       </Button>
@@ -815,7 +826,11 @@ function App() {
             <p className="text-lg text-slate-700 mb-6">
               <strong>Das könnte auch Ihre Geschichte sein.</strong> Lassen Sie uns gemeinsam Ihr Unternehmen transformieren.
             </p>
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
+            <Button 
+              size="lg" 
+              className="bg-red-600 hover:bg-red-700 text-white"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Ähnliche Erfolge für mein Unternehmen
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
@@ -848,7 +863,11 @@ function App() {
             </div>
           </div>
 
-          <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100 text-xl px-12 py-6 rounded-xl shadow-xl">
+          <Button 
+            size="lg" 
+            className="bg-white text-red-600 hover:bg-gray-100 text-xl px-12 py-6 rounded-xl shadow-xl"
+            onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+          >
               Kostenlose Strategieberatung sichern
             <ArrowRight className="ml-3 w-6 h-6" />
           </Button>
@@ -911,6 +930,7 @@ function App() {
 
                 <Button 
                   className={`w-full ${pkg.popular ? 'bg-red-600 hover:bg-red-700 text-white' : 'border border-red-600 text-red-600 hover:bg-red-50'}`}
+                  onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   {pkg.popular ? 'Jetzt starten' : 'Mehr erfahren'}
                 </Button>
@@ -922,7 +942,11 @@ function App() {
             <p className="text-lg text-slate-700 mb-6">
               <strong>Unsicher welches Paket?</strong> Lassen Sie uns das gemeinsam in einem kostenlosen Gespräch klären.
             </p>
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
+            <Button 
+              size="lg" 
+              className="bg-red-600 hover:bg-red-700 text-white"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Kostenlose Beratung vereinbaren
               <Phone className="ml-2 w-5 h-5" />
             </Button>
@@ -979,7 +1003,10 @@ function App() {
                 </li>
               </ul>
 
-              <Button className="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3">
+              <Button 
+                className="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3"
+                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Starter wählen
               </Button>
             </Card>
@@ -1034,7 +1061,10 @@ function App() {
                 </li>
               </ul>
 
-              <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 shadow-lg">
+              <Button 
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 shadow-lg"
+                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Professional wählen
               </Button>
             </Card>
@@ -1087,7 +1117,10 @@ function App() {
                 </li>
               </ul>
 
-              <Button className="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3">
+              <Button 
+                className="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3"
+                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Enterprise wählen
               </Button>
             </Card>
@@ -1430,7 +1463,11 @@ function App() {
             <p className="text-lg text-slate-700 mb-6">
               Haben Sie weitere Fragen? Wir beantworten sie gerne in einem persönlichen Gespräch.
             </p>
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
+            <Button 
+              size="lg" 
+              className="bg-red-600 hover:bg-red-700 text-white"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Kostenlose Beratung vereinbaren
               <Phone className="ml-2 w-5 h-5" />
             </Button>
