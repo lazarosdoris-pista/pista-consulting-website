@@ -465,9 +465,9 @@ function App() {
       {/* Hero Section - Simplified */}
       <section className="py-12 md:py-20 px-4 sm:px-6 bg-gradient-to-br from-slate-50 to-white">
         <div className="container mx-auto text-center">
-          <h1 className="text-3xl md:text-6xl font-bold text-slate-900 mb-4 md:mb-6">
-            Effizienz steigern mit der
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-pink-600">
+          <h1 className="text-3xl md:text-6xl font-bold text-slate-900 mb-4 md:mb-6 leading-tight">
+            Effizienz steigern mit der{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-pink-600 whitespace-nowrap">
               richtigen Digitalisierung
             </span>
           </h1>
