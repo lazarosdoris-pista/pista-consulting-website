@@ -26,22 +26,23 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" style={{ fontFamily: 'Gomme Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
       {/* Header */}
       <header className="bg-white border-b border-gray-200 px-6 py-4 sticky top-0 z-50">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center space-x-3">
-            <div className="text-2xl font-bold">
-              <span className="text-black">PISTA</span>
-              <span className="text-gray-500 font-normal ml-2">consulting</span>
+            <div className="text-3xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+              <span style={{ color: '#1f1f1e' }}>PISTA</span>
+              <span style={{ color: '#E4002B' }}>.</span>
+              <span className="text-base font-normal ml-2" style={{ color: '#1f1f1e', fontFamily: 'Gomme Sans Regular, sans-serif', letterSpacing: '0.1em' }}>consulting</span>
             </div>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('problem')} className="text-gray-700 hover:text-gray-900">Problem</button>
-            <button onClick={() => scrollToSection('solution')} className="text-gray-700 hover:text-gray-900">Lösung</button>
-            <button onClick={() => scrollToSection('success')} className="text-gray-700 hover:text-gray-900">Erfolg</button>
-            <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-gray-900">Preise</button>
-            <button onClick={() => scrollToSection('calculator')} className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50">
+            <button onClick={() => scrollToSection('problem')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Problem</button>
+            <button onClick={() => scrollToSection('solution')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Lösung</button>
+            <button onClick={() => scrollToSection('success')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Erfolg</button>
+            <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Preise</button>
+            <button onClick={() => scrollToSection('calculator')} className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
               📊 ROI Rechner
             </button>
           </nav>
@@ -49,73 +50,50 @@ function App() {
       </header>
 
       {/* Red Banner */}
-      <div className="bg-red-600 text-white py-3 text-center">
+      <div className="py-3 text-center text-white" style={{ backgroundColor: '#E4002B' }}>
         <div className="flex items-center justify-center space-x-4">
-          <span>📞 Kostenlose Erstberatung - Begrenzte Kapazitäten</span>
+          <span style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>📞 Kostenlose Erstberatung - Begrenzte Kapazitäten</span>
           <div className="flex space-x-4 text-sm">
             <div className="text-center">
-              <div className="text-xl font-bold">6</div>
-              <div className="text-xs">Tage</div>
+              <div className="text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>6</div>
+              <div className="text-xs" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Tage</div>
             </div>
             <div className="text-center">
-              <div className="text-xl font-bold">23</div>
-              <div className="text-xs">Std</div>
+              <div className="text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>14</div>
+              <div className="text-xs" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Stunden</div>
             </div>
             <div className="text-center">
-              <div className="text-xl font-bold">58</div>
-              <div className="text-xs">Min</div>
-            </div>
-            <div className="text-center">
-              <div className="text-xl font-bold">34</div>
-              <div className="text-xs">Sek</div>
+              <div className="text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>32</div>
+              <div className="text-xs" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Minuten</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Effizienz steigern mit der <span className="text-red-600">richtigen Digitalisierung</span>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+            Effizienz steigern mit der richtigen Digitalisierung
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Fokus auf messbare Ergebnisse und nachhaltigen Erfolg für deutsche KMUs
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+            Wir helfen mittelständischen Unternehmen dabei, ihre Prozesse zu optimieren und durch strategische Digitalisierung nachhaltiges Wachstum zu erzielen.
           </p>
-          <button 
-            onClick={() => scrollToSection('calculator')}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-medium mb-12"
-          >
-            Kostenloses Einsparpotenzial berechnen
-          </button>
-
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
-            <div className="flex items-center space-x-2">
-              <span className="text-green-600">✓</span>
-              <span className="text-gray-700">100% kostenlos</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-green-600">✓</span>
-              <span className="text-gray-700">Keine Verpflichtung</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-green-600">✓</span>
-              <span className="text-gray-700">Messbare Ergebnisse</span>
-            </div>
-          </div>
-
-          {/* Social Proof */}
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            <div className="flex items-center space-x-2">
-              <div className="flex text-yellow-400">
-                {'★'.repeat(5)}
-              </div>
-              <span className="text-gray-700">4.9/5 Kundenbewertung</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-gray-700">👥 150+ erfolgreiche Projekte</span>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onClick={() => scrollToSection('contact')} 
+              className="px-8 py-4 text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}
+            >
+              Kostenlose Beratung sichern
+            </button>
+            <button 
+              onClick={() => scrollToSection('calculator')} 
+              className="px-8 py-4 border-2 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-colors"
+              style={{ borderColor: '#1f1f1e', color: '#1f1f1e', fontFamily: 'Gomme Sans Bold, sans-serif' }}
+            >
+              Einsparpotenzial berechnen
+            </button>
           </div>
         </div>
       </section>
@@ -124,275 +102,154 @@ function App() {
       <section id="problem" className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Kennen Sie das auch?</h2>
-            <p className="text-xl text-gray-600">Diese Probleme kosten deutsche KMUs täglich Tausende von Euro</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-red-600 text-3xl mb-4">⚙️</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Chaos in der IT-Landschaft</h3>
-              <p className="text-gray-600">
-                5+ verschiedene Software-Lösungen, die nicht miteinander sprechen. Doppelerfassung, Excel-Listen und manuelle Prozesse überall.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-red-600 text-3xl mb-4">📈</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Fehlende Digitalisierungsstrategie</h3>
-              <p className="text-gray-600">
-                Ohne klare Strategie werden IT-Investitionen zur Kostenfalle. Unkoordinierte Einzellösungen führen zu Ineffizienz und Mehrkosten.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-red-600 text-3xl mb-4">⏰</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Endlose IT-Projekte</h3>
-              <p className="text-gray-600">
-                12-18 Monate Implementierung ohne klare Erfolgsmessung. Berater verschwinden nach Go-Live und lassen Sie allein.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <p className="text-lg font-semibold text-gray-900 mb-6">
-              <strong>Das Ergebnis:</strong> Ihre Konkurrenz überholt Sie, während Sie noch mit veralteten Systemen kämpfen.
+            <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+              Kennen Sie diese Herausforderungen?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+              Viele mittelständische Unternehmen stehen vor ähnlichen Problemen bei der Digitalisierung
             </p>
-            <button 
-              onClick={() => scrollToSection('solution')}
-              className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50"
-            >
-              Ich will das ändern - Lösung zeigen →
-            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="text-4xl mb-4">🔄</div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                Chaos in der IT-Landschaft
+              </h3>
+              <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                Verschiedene Systeme, die nicht miteinander kommunizieren. Doppelte Dateneingaben und ineffiziente Prozesse kosten Zeit und Geld.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="text-4xl mb-4">❓</div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                Fehlende Digitalisierungsstrategie
+              </h3>
+              <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                Ohne klaren Plan werden IT-Projekte zu Kostenfallen. Technologie wird implementiert, ohne den tatsächlichen Nutzen zu berücksichtigen.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="text-4xl mb-4">⏰</div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                Endlose IT-Projekte
+              </h3>
+              <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                Projekte dauern länger als geplant, Budgets werden überschritten und am Ende funktioniert das System nicht wie gewünscht.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Solution Section */}
-      <section id="solution" className="py-20 px-6">
+      <section id="solution" className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Es gibt einen besseren Weg</h2>
-            <p className="text-xl text-gray-600">
-              <strong>Strategieberatung & Digitalisierung</strong> aus einer Hand. <strong>Maßgeschneiderte Lösungen</strong> für Ihr Unternehmen. <strong>90 Tage</strong> bis zu messbaren Ergebnissen.
+            <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+              Die PISTA-Methode: Ihr Weg zum Erfolg
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+              Unser bewährter 3-Schritte-Prozess bringt Sie sicher ans Ziel
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-red-600 text-3xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Strategieberatung</h3>
-              <p className="text-gray-600">
-                Individuelle Digitalisierungsstrategie für Ihr Unternehmen
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+                1
+              </div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                Analyse & Strategie
+              </h3>
+              <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                Wir analysieren Ihre aktuellen Prozesse und entwickeln eine maßgeschneiderte Digitalisierungsstrategie, die zu Ihrem Unternehmen passt.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-red-600 text-3xl mb-4">📈</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Kosteneffizient</h3>
-              <p className="text-gray-600">
-                Maximale Effizienz bei optimalen Kosten
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+                2
+              </div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                Implementierung
+              </h3>
+              <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                Schritt für Schritt setzen wir die Lösung um. Mit klaren Meilensteinen, transparenter Kommunikation und ohne böse Überraschungen.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-red-600 text-3xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Messbare Ergebnisse</h3>
-              <p className="text-gray-600">
-                Klare KPIs und regelmäßige Erfolgsmessung
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+                3
+              </div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                Optimierung
+              </h3>
+              <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                Nach dem Go-Live optimieren wir kontinuierlich. Ihre Mitarbeiter werden geschult und Sie erhalten langfristigen Support.
               </p>
-            </div>
-          </div>
-
-          {/* PISTA Method */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12">Die PISTA-Methode in 3 Schritten</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-6xl font-bold text-gray-300 mb-4">1</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Strategieanalyse</h3>
-                <p className="text-gray-600">
-                  Wir analysieren Ihre Prozesse und entwickeln eine maßgeschneiderte Digitalisierungsstrategie
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-6xl font-bold text-gray-300 mb-4">2</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">ERP-Integration</h3>
-                <p className="text-gray-600">
-                  Implementierung einer integrierten Business-Software (basierend auf Odoo) für alle Geschäftsprozesse
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-6xl font-bold text-gray-300 mb-4">3</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Kontinuierliche Optimierung</h3>
-                <p className="text-gray-600">
-                  Laufende Betreuung und Anpassung für maximale Effizienz und ROI
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <button 
-              onClick={() => scrollToSection('calculator')}
-              className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-medium"
-            >
-              Kostenloses Einsparpotenzial berechnen
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* ROI Calculator */}
-      <section id="calculator" className="py-20 px-6 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Ihr persönliches Einsparpotenzial</h2>
-            <p className="text-xl text-gray-600">Berechnen Sie Ihre mögliche Ersparnis in 30 Sekunden</p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* Input Section */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Ihre Eingaben</h3>
-                
-                <div className="mb-6">
-                  <label className="block text-gray-700 font-medium mb-2">Anzahl Mitarbeiter</label>
-                  <input
-                    type="range"
-                    min="5"
-                    max="200"
-                    value={employees}
-                    onChange={(e) => setEmployees(parseInt(e.target.value))}
-                    className="w-full"
-                  />
-                  <div className="text-center mt-2 text-2xl font-bold text-gray-900">{employees}</div>
-                </div>
-
-                <div className="mb-6">
-                  <label className="block text-gray-700 font-medium mb-2">Durchschnittlicher Stundenlohn (€)</label>
-                  <input
-                    type="range"
-                    min="20"
-                    max="80"
-                    value={hourlyWage}
-                    onChange={(e) => setHourlyWage(parseInt(e.target.value))}
-                    className="w-full"
-                  />
-                  <div className="text-center mt-2 text-2xl font-bold text-gray-900">{hourlyWage}</div>
-                </div>
-              </div>
-
-              {/* Results Section */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Ihr Einsparpotenzial</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Gesparte Stunden/Woche:</span>
-                    <span className="text-2xl font-bold text-red-600">{savedHours}h</span>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Jährliche Kosteneinsparung:</span>
-                    <span className="text-2xl font-bold text-red-600">€{yearlySavings.toLocaleString()}</span>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Zusätzlicher Umsatz:</span>
-                    <span className="text-2xl font-bold text-blue-600">€{additionalRevenue.toLocaleString()}</span>
-                  </div>
-                  
-                  <hr className="my-4" />
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-900 font-bold">Gesamtnutzen/Jahr:</span>
-                    <span className="text-3xl font-bold text-red-600">€{totalBenefit.toLocaleString()}</span>
-                  </div>
-                </div>
-
-                <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-lg mt-6 font-medium">
-                  Kostenlose Detailanalyse anfordern
-                </button>
-                
-                <p className="text-sm text-gray-500 text-center mt-3">
-                  Unverbindlich • Kostenlos • Binnen 24h Antwort
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Success Story */}
-      <section id="success" className="py-20 px-6">
+      {/* Success Story Section */}
+      <section id="success" className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Wie Bavaria Heizungstechnik 6-stellige Gewinne erzielte
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+              Erfolgsgeschichte: Bavaria Heizungstechnik
             </h2>
-            <p className="text-xl text-gray-600">Eine wahre Geschichte über die Macht der richtigen Digitalisierung</p>
+            <p className="text-xl text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+              Wie wir einem Familienunternehmen zu 40% mehr Effizienz verholfen haben
+            </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="bg-white rounded-lg p-8 shadow-sm">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-gray-900">Zoran Pozderovic</h3>
-                  <p className="text-gray-600">Geschäftsführer</p>
-                  <p className="text-gray-600">Bavaria Heizungstechnik GmbH</p>
-                </div>
-
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center space-x-3">
-                    <span className="text-green-600">📈</span>
-                    <span className="text-gray-700">6-stelliger Gewinn erreicht</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="text-green-600">📊</span>
-                    <span className="text-gray-700">7-stelliger Umsatz generiert</span>
-                  </div>
-                </div>
-
-                <p className="text-sm text-gray-500 mb-6">
-                  Projektzeitraum: 8 Wochen | Branche: SHK-Handwerk
+                <h3 className="text-2xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                  Die Herausforderung
+                </h3>
+                <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                  Bavaria Heizungstechnik, ein Familienunternehmen mit 45 Mitarbeitern, kämpfte mit veralteten Systemen. Angebote wurden noch in Excel erstellt, die Lagerverwaltung lief über Zettelwirtschaft und Kundendaten waren über verschiedene Systeme verstreut.
                 </p>
-
-                <blockquote className="text-lg text-gray-700 italic border-l-4 border-red-600 pl-4">
-                  "PISTA hat unseren SHK-Meisterbetrieb revolutioniert. Von manuellen Prozessen zu 6-stelligen Gewinnen - das hätten wir nie für möglich gehalten."
-                </blockquote>
+                <h4 className="text-lg font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                  Unsere Lösung
+                </h4>
+                <ul className="space-y-2 text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                  <li>✅ Integrierte ERP-Lösung für alle Geschäftsprozesse</li>
+                  <li>✅ Automatisierte Angebotserstellung</li>
+                  <li>✅ Digitale Lagerverwaltung mit Barcode-Scanner</li>
+                  <li>✅ Mobile App für Techniker vor Ort</li>
+                  <li>✅ Kundendatenbank mit 360°-Sicht</li>
+                </ul>
               </div>
 
-              <div>
-                <div className="mb-6">
-                  <h4 className="font-bold text-red-600 mb-2">Die Herausforderung:</h4>
-                  <p className="text-gray-700">
-                    Manuelle Angebotserstellung, ineffiziente Terminplanung, fehlende Kundenübersicht bei 70+ Wärmepumpen-Installationen jährlich
-                  </p>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="font-bold text-green-600 mb-2">Die PISTA-Lösung:</h4>
-                  <p className="text-gray-700">
-                    Integrierte ERP-Lösung mit automatisierter Angebotserstellung, digitaler Terminplanung und CRM-System für Heizungs- und Sanitärprojekte
-                  </p>
-                </div>
-
-                <button className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 mb-6">
-                  Vollständige Erfolgsgeschichte ansehen →
-                </button>
-
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-gray-900 font-semibold mb-2">
-                    <strong>Das könnte auch Ihre Geschichte sein.</strong> Lassen Sie uns gemeinsam Ihr Unternehmen transformieren.
-                  </p>
-                  <button className="text-gray-600 hover:text-gray-800">
-                    Ähnliche Erfolge für mein Unternehmen
-                  </button>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h4 className="text-lg font-bold mb-6 text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                  Messbare Ergebnisse nach 6 Monaten
+                </h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>40%</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Zeitersparnis bei Angeboten</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>€180k</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Jährliche Kosteneinsparung</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>25%</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Weniger Lagerkosten</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>95%</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Mitarbeiterzufriedenheit</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -400,195 +257,207 @@ function App() {
         </div>
       </section>
 
-      {/* Urgency Section */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Ineffiziente Prozesse kosten täglich wertvolle Zeit und Ressourcen
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Während Sie zögern, digitalisiert sich Ihre Konkurrenz. Warten Sie nicht länger - starten Sie heute auf der richtigen PISTA.
-          </p>
-
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Nächster verfügbarer Projektstart:</h3>
-            <div className="text-5xl font-bold text-gray-400 mb-2">Q1 2026</div>
-            <p className="text-gray-600">Aufgrund hoher Nachfrage</p>
+      {/* ROI Calculator Section */}
+      <section id="calculator" className="py-20 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+              Berechnen Sie Ihr Einsparpotenzial
+            </h2>
+            <p className="text-xl text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+              Finden Sie heraus, wie viel Ihre Digitalisierung einsparen kann
+            </p>
           </div>
 
-          <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-medium">
-            Kostenlose Strategieberatung sichern 📅
-          </button>
+          <div className="bg-gray-50 p-8 rounded-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <label className="block text-lg font-semibold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                  Anzahl Mitarbeiter: {employees}
+                </label>
+                <input
+                  type="range"
+                  min="10"
+                  max="500"
+                  value={employees}
+                  onChange={(e) => setEmployees(parseInt(e.target.value))}
+                  className="w-full h-2 rounded-lg appearance-none cursor-pointer"
+                  style={{ background: `linear-gradient(to right, #E4002B 0%, #E4002B ${(employees-10)/490*100}%, #ddd ${(employees-10)/490*100}%, #ddd 100%)` }}
+                />
+                <div className="flex justify-between text-sm text-gray-500 mt-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                  <span>10</span>
+                  <span>500</span>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-lg font-semibold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                  Durchschnittlicher Stundenlohn: €{hourlyWage}
+                </label>
+                <input
+                  type="range"
+                  min="20"
+                  max="80"
+                  value={hourlyWage}
+                  onChange={(e) => setHourlyWage(parseInt(e.target.value))}
+                  className="w-full h-2 rounded-lg appearance-none cursor-pointer"
+                  style={{ background: `linear-gradient(to right, #E4002B 0%, #E4002B ${(hourlyWage-20)/60*100}%, #ddd ${(hourlyWage-20)/60*100}%, #ddd 100%)` }}
+                />
+                <div className="flex justify-between text-sm text-gray-500 mt-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                  <span>€20</span>
+                  <span>€80</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 p-6 bg-white rounded-lg border-2" style={{ borderColor: '#E4002B' }}>
+              <h3 className="text-2xl font-bold mb-4 text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                Ihr Einsparpotenzial pro Jahr
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="text-3xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>
+                    {savedHours.toLocaleString()}h
+                  </div>
+                  <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Gesparte Arbeitszeit</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>
+                    €{yearlySavings.toLocaleString()}
+                  </div>
+                  <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Kosteneinsparung</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>
+                    €{totalBenefit.toLocaleString()}
+                  </div>
+                  <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Gesamtnutzen</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-6">
+      <section id="pricing" className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Transparente Preise, maximaler Wert</h2>
-            <p className="text-xl text-gray-600">Einmalige Investition für lebenslange Vorteile</p>
+            <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+              Transparente Preisgestaltung
+            </h2>
+            <p className="text-xl text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+              Wählen Sie das Paket, das zu Ihrem Unternehmen passt
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Starter */}
-            <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">PISTA Starter</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">€12.999</div>
-              <p className="text-gray-600 mb-4">einmalig</p>
-              <p className="text-sm text-gray-600 mb-6">
-                Für Unternehmen bis 25 Mitarbeiter<br/>
-                Ersetzt 3-5 separate Software-Lizenzen
-              </p>
-
-              <ul className="space-y-3 mb-8 text-sm">
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Umfassende Strategieberatung & Digitalisierungskonzept</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Vollständige ERP-Implementierung (6-8 Wochen)</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Datenintegration aus bestehenden Systemen</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Prozessautomatisierung (5 Kern-Workflows)</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>+ 2 weitere Leistungen</span>
-                </li>
-              </ul>
-
-              <p className="text-sm text-gray-600 mb-4">Professionelle Betreuung</p>
-              
-              <button className="w-full border border-gray-400 text-gray-700 py-3 rounded-lg hover:bg-gray-50">
-                Mehr erfahren
-              </button>
-            </div>
-
-            {/* Professional */}
-            <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-red-600 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">EMPFOHLEN</span>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>Starter</h3>
+              <div className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>
+                €12.999
               </div>
-              
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">PISTA Professional</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">€24.999</div>
-              <p className="text-gray-600 mb-4">einmalig</p>
-              <p className="text-sm text-gray-600 mb-2">
-                Für wachsende Unternehmen 25-100 Mitarbeiter<br/>
-                Weniger als 2 Jahre typische ERP-Lizenzkosten
-              </p>
-              <p className="text-sm text-red-600 font-semibold mb-6">Optimale Kosten-Nutzen-Relation</p>
-
-              <ul className="space-y-3 mb-8 text-sm">
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Alles aus Starter-Paket</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Erweiterte Strategieberatung & Roadmap-Entwicklung</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Multi-Standort-Setup & Berechtigungskonzept</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>API-Integrationen (E-Commerce, Buchhaltung, etc.)</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>+ 2 weitere Leistungen</span>
-                </li>
+              <ul className="space-y-3 mb-8 text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                <li>✅ Prozessanalyse</li>
+                <li>✅ Digitalisierungsstrategie</li>
+                <li>✅ Software-Empfehlung</li>
+                <li>✅ Basis-Implementation</li>
+                <li>✅ 3 Monate Support</li>
               </ul>
-
-              <p className="text-sm text-gray-600 mb-4">Professionelle Betreuung</p>
-              
-              <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 py-3 rounded-lg">
-                Jetzt starten
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="w-full py-3 border-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+                style={{ borderColor: '#1f1f1e', color: '#1f1f1e', fontFamily: 'Gomme Sans Bold, sans-serif' }}
+              >
+                Paket wählen
               </button>
             </div>
 
-            {/* Enterprise */}
-            <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">PISTA Enterprise</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">€49.999</div>
-              <p className="text-gray-600 mb-4">einmalig</p>
-              <p className="text-sm text-gray-600 mb-2">
-                Für Unternehmen ab 100 Mitarbeitern<br/>
-                Bruchteil der Kosten einer SAP-Implementierung
-              </p>
-              <p className="text-sm text-blue-600 font-semibold mb-6">Maximale Effizienz & ROI</p>
-
-              <ul className="space-y-3 mb-8 text-sm">
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Alles aus Professional-Paket</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>C-Level Strategieberatung & Transformation Management</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Vollständige Systemlandschaft-Integration</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Dedicated Project Manager</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>+ 2 weitere Leistungen</span>
-                </li>
+            <div className="bg-white p-8 rounded-lg shadow-sm border-2" style={{ borderColor: '#E4002B' }}>
+              <div className="text-center mb-4">
+                <span className="px-3 py-1 text-sm text-white rounded-full" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+                  BELIEBT
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>Professional</h3>
+              <div className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>
+                €24.999
+              </div>
+              <ul className="space-y-3 mb-8 text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                <li>✅ Alles aus Starter</li>
+                <li>✅ ERP-Integration</li>
+                <li>✅ Workflow-Automatisierung</li>
+                <li>✅ Mitarbeiterschulungen</li>
+                <li>✅ 6 Monate Support</li>
+                <li>✅ Performance-Monitoring</li>
               </ul>
-
-              <p className="text-sm text-gray-600 mb-4">Premium-Support inklusive</p>
-              
-              <button className="w-full border border-gray-400 text-gray-700 py-3 rounded-lg hover:bg-gray-50">
-                Mehr erfahren
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="w-full py-3 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}
+              >
+                Paket wählen
               </button>
             </div>
-          </div>
 
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">
-              <strong>Unsicher welches Paket?</strong> Lassen Sie uns das gemeinsam in einem kostenlosen Gespräch klären.
-            </p>
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-medium">
-              Kostenlose Beratung vereinbaren 📞
-            </button>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>Enterprise</h3>
+              <div className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>
+                €49.999
+              </div>
+              <ul className="space-y-3 mb-8 text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                <li>✅ Alles aus Professional</li>
+                <li>✅ Custom Development</li>
+                <li>✅ API-Integrationen</li>
+                <li>✅ Change Management</li>
+                <li>✅ 12 Monate Support</li>
+                <li>✅ Dedicated Consultant</li>
+              </ul>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="w-full py-3 border-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+                style={{ borderColor: '#1f1f1e', color: '#1f1f1e', fontFamily: 'Gomme Sans Bold, sans-serif' }}
+              >
+                Paket wählen
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section className="py-20 px-6 bg-gray-50">
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Starten Sie jetzt auf der richtigen PISTA
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+              Kostenlose Erstberatung sichern
             </h2>
-            <p className="text-xl text-gray-600">Kostenlose Analyse in 4 einfachen Schritten</p>
+            <p className="text-xl text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+              Lassen Sie uns über Ihr Digitalisierungspotenzial sprechen
+            </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="mb-8">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-bold text-gray-900">Schritt {currentStep} von 4</h3>
-                <span className="text-sm text-gray-600">{Math.round((currentStep / 4) * 100)}% abgeschlossen</span>
+          <div className="bg-gray-50 p-8 rounded-lg">
+            <div className="flex justify-between items-center mb-8">
+              <h3 className="text-2xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                Schritt {currentStep} von 4
+              </h3>
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>
+                  {currentStep * 25}%
+                </span>
+                <span className="text-gray-500" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>abgeschlossen</span>
               </div>
+            </div>
+
+            <div className="mb-8">
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div 
-                  className="bg-red-600 h-2 rounded-full transition-all duration-300"
-                  style={{ width: `${(currentStep / 4) * 100}%` }}
+                  className="h-2 rounded-full transition-all duration-300"
+                  style={{ 
+                    backgroundColor: '#E4002B',
+                    width: `${currentStep * 25}%`
+                  }}
                 ></div>
               </div>
             </div>
@@ -598,17 +467,21 @@ function App() {
                 {/* Schritt 1: IT-Budget */}
                 {currentStep === 1 && (
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-6">IT-Budget</h3>
-                    <p className="text-gray-700 mb-6">Wie hoch ist Ihr jährliches IT-Budget? *</p>
+                    <h3 className="text-xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>IT-Budget</h3>
+                    <p className="text-gray-700 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Wie hoch ist Ihr jährliches IT-Budget? *</p>
                     
                     <div className="grid grid-cols-2 gap-4 mb-8">
                       {['< 50.000€', '50.000€ - 100.000€', '100.000€ - 250.000€', '> 250.000€'].map((budget) => (
                         <button
                           key={budget}
                           onClick={() => setSelectedBudget(budget)}
-                          className={`p-4 border rounded-lg text-left hover:bg-gray-50 ${
-                            selectedBudget === budget ? 'border-red-600 bg-red-50' : 'border-gray-300'
+                          className={`p-4 border rounded-lg text-left hover:bg-gray-50 transition-colors ${
+                            selectedBudget === budget ? 'bg-red-50' : ''
                           }`}
+                          style={{ 
+                            borderColor: selectedBudget === budget ? '#E4002B' : '#d1d5db',
+                            fontFamily: 'Gomme Sans Regular, sans-serif'
+                          }}
                         >
                           {budget}
                         </button>
@@ -618,7 +491,8 @@ function App() {
                     <button 
                       onClick={() => setCurrentStep(2)}
                       disabled={!selectedBudget}
-                      className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg disabled:opacity-50 flex items-center"
+                      className="px-6 py-3 rounded-lg disabled:opacity-50 flex items-center text-white font-semibold hover:opacity-90 transition-opacity"
+                      style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}
                     >
                       Weiter →
                     </button>
@@ -628,17 +502,21 @@ function App() {
                 {/* Schritt 2: Unternehmensgröße */}
                 {currentStep === 2 && (
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-6">Unternehmensgröße</h3>
-                    <p className="text-gray-700 mb-6">Wie viele Mitarbeiter hat Ihr Unternehmen? *</p>
+                    <h3 className="text-xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>Unternehmensgröße</h3>
+                    <p className="text-gray-700 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Wie viele Mitarbeiter hat Ihr Unternehmen? *</p>
                     
                     <div className="grid grid-cols-2 gap-4 mb-8">
                       {['1-25', '26-100', '101-500', '> 500'].map((size) => (
                         <button
                           key={size}
                           onClick={() => setSelectedEmployees(size)}
-                          className={`p-4 border rounded-lg text-left hover:bg-gray-50 ${
-                            selectedEmployees === size ? 'border-red-600 bg-red-50' : 'border-gray-300'
+                          className={`p-4 border rounded-lg text-left hover:bg-gray-50 transition-colors ${
+                            selectedEmployees === size ? 'bg-red-50' : ''
                           }`}
+                          style={{ 
+                            borderColor: selectedEmployees === size ? '#E4002B' : '#d1d5db',
+                            fontFamily: 'Gomme Sans Regular, sans-serif'
+                          }}
                         >
                           {size}
                         </button>
@@ -648,14 +526,16 @@ function App() {
                     <div className="flex justify-between">
                       <button 
                         onClick={() => setCurrentStep(1)}
-                        className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50"
+                        className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 font-semibold"
+                        style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}
                       >
                         Zurück
                       </button>
                       <button 
                         onClick={() => setCurrentStep(3)}
                         disabled={!selectedEmployees}
-                        className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg disabled:opacity-50 flex items-center"
+                        className="px-6 py-3 rounded-lg disabled:opacity-50 flex items-center text-white font-semibold hover:opacity-90 transition-opacity"
+                        style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}
                       >
                         Weiter →
                       </button>
@@ -666,17 +546,22 @@ function App() {
                 {/* Schritt 3: Zeitrahmen */}
                 {currentStep === 3 && (
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-6">Zeitrahmen</h3>
-                    <p className="text-gray-700 mb-6">Wann möchten Sie mit der Digitalisierung starten? *</p>
+                    <h3 className="text-xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>Zeitrahmen</h3>
+                    <p className="text-gray-700 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Wann möchten Sie mit der Digitalisierung starten? *</p>
                     
                     <div className="space-y-4 mb-8">
                       {['Sofort', 'In den nächsten 3 Monaten', 'In den nächsten 6 Monaten', 'Nächstes Jahr'].map((timeframe) => (
                         <button
                           key={timeframe}
                           onClick={() => setSelectedTimeframe(timeframe)}
-                          className={`w-full p-4 border rounded-lg text-left hover:bg-gray-50 ${
-                            selectedTimeframe === timeframe ? 'border-red-600 bg-red-50' : 'border-gray-300'
-                          } ${timeframe === 'In den nächsten 3 Monaten' ? 'bg-gray-900 text-white border-gray-900' : ''}`}
+                          className={`w-full p-4 border rounded-lg text-left hover:bg-gray-50 transition-colors ${
+                            selectedTimeframe === timeframe ? 'bg-red-50' : ''
+                          } ${timeframe === 'In den nächsten 3 Monaten' ? 'text-white' : ''}`}
+                          style={{ 
+                            borderColor: selectedTimeframe === timeframe ? '#E4002B' : '#d1d5db',
+                            backgroundColor: timeframe === 'In den nächsten 3 Monaten' ? '#1f1f1e' : (selectedTimeframe === timeframe ? '#fef2f2' : ''),
+                            fontFamily: 'Gomme Sans Regular, sans-serif'
+                          }}
                         >
                           {timeframe}
                         </button>
@@ -686,14 +571,16 @@ function App() {
                     <div className="flex justify-between">
                       <button 
                         onClick={() => setCurrentStep(2)}
-                        className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50"
+                        className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 font-semibold"
+                        style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}
                       >
                         Zurück
                       </button>
                       <button 
                         onClick={() => setCurrentStep(4)}
                         disabled={!selectedTimeframe}
-                        className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg disabled:opacity-50 flex items-center"
+                        className="px-6 py-3 rounded-lg disabled:opacity-50 flex items-center text-white font-semibold hover:opacity-90 transition-opacity"
+                        style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}
                       >
                         Weiter →
                       </button>
@@ -704,36 +591,48 @@ function App() {
                 {/* Schritt 4: Kontaktdaten */}
                 {currentStep === 4 && (
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-6">Kontaktdaten</h3>
+                    <h3 className="text-xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>Kontaktdaten</h3>
                     
                     <div className="space-y-6 mb-8">
                       <div>
-                        <label className="block text-gray-700 font-medium mb-2">Name *</label>
+                        <label className="block text-gray-700 font-medium mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Name *</label>
                         <input
                           type="text"
                           value={formData.name}
                           onChange={(e) => setFormData({...formData, name: e.target.value})}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+                          style={{ 
+                            fontFamily: 'Gomme Sans Regular, sans-serif',
+                            '--tw-ring-color': '#E4002B'
+                          }}
                         />
                       </div>
 
                       <div>
-                        <label className="block text-gray-700 font-medium mb-2">E-Mail *</label>
+                        <label className="block text-gray-700 font-medium mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>E-Mail *</label>
                         <input
                           type="email"
                           value={formData.email}
                           onChange={(e) => setFormData({...formData, email: e.target.value})}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+                          style={{ 
+                            fontFamily: 'Gomme Sans Regular, sans-serif',
+                            '--tw-ring-color': '#E4002B'
+                          }}
                         />
                       </div>
 
                       <div>
-                        <label className="block text-gray-700 font-medium mb-2">Telefon *</label>
+                        <label className="block text-gray-700 font-medium mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Telefon *</label>
                         <input
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+                          style={{ 
+                            fontFamily: 'Gomme Sans Regular, sans-serif',
+                            '--tw-ring-color': '#E4002B'
+                          }}
                         />
                       </div>
 
@@ -745,9 +644,9 @@ function App() {
                           onChange={(e) => setFormData({...formData, privacy: e.target.checked})}
                           className="mt-1"
                         />
-                        <label htmlFor="privacy" className="text-sm text-gray-700">
+                        <label htmlFor="privacy" className="text-sm text-gray-700" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
                           Ich akzeptiere die{' '}
-                          <a href="#" className="text-red-600 underline">Datenschutzerklärung</a>{' '}
+                          <a href="#" className="underline" style={{ color: '#E4002B' }}>Datenschutzerklärung</a>{' '}
                           und stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden. *
                         </label>
                       </div>
@@ -756,14 +655,16 @@ function App() {
                     <div className="flex justify-between">
                       <button 
                         onClick={() => setCurrentStep(3)}
-                        className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50"
+                        className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 font-semibold"
+                        style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}
                       >
                         Zurück
                       </button>
                       <button 
                         onClick={() => setIsFormCompleted(true)}
                         disabled={!formData.name || !formData.email || !formData.phone || !formData.privacy}
-                        className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg disabled:opacity-50 flex items-center"
+                        className="px-6 py-3 rounded-lg disabled:opacity-50 flex items-center text-white font-semibold hover:opacity-90 transition-opacity"
+                        style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}
                       >
                         Weiter →
                       </button>
@@ -775,25 +676,25 @@ function App() {
               /* Dankesnachricht */
               <div className="text-center py-12">
                 <div className="text-6xl mb-6">🎉</div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">Vielen Dank!</h3>
-                <p className="text-xl text-gray-600 mb-6">
+                <h3 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>Vielen Dank!</h3>
+                <p className="text-xl text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
                   Ihre Anfrage wurde erfolgreich übermittelt.
                 </p>
                 <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
                   <div className="flex items-center justify-center space-x-2 text-green-800 mb-4">
                     <span className="text-2xl">✓</span>
-                    <span className="font-semibold">Was passiert als nächstes?</span>
+                    <span className="font-semibold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Was passiert als nächstes?</span>
                   </div>
-                  <ul className="text-left text-green-700 space-y-2">
+                  <ul className="text-left text-green-700 space-y-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
                     <li>• Unser Experte meldet sich binnen 24 Stunden bei Ihnen</li>
                     <li>• Kostenlose 30-minütige Strategieberatung per Telefon</li>
                     <li>• Individuelle Analyse Ihres Digitalisierungspotenzials</li>
                     <li>• Unverbindliches Angebot basierend auf Ihren Anforderungen</li>
                   </ul>
                 </div>
-                <p className="text-gray-600 mb-8">
+                <p className="text-gray-600 mb-8" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
                   Haben Sie noch Fragen? Rufen Sie uns gerne direkt an:<br/>
-                  <strong className="text-gray-900">📞 +49 (0) 123 456 789</strong>
+                  <strong style={{ color: '#1f1f1e', fontFamily: 'Gomme Sans Bold, sans-serif' }}>📞 +49 (0) 123 456 789</strong>
                 </p>
                 <button 
                   onClick={() => {
@@ -804,7 +705,8 @@ function App() {
                     setSelectedTimeframe('')
                     setFormData({name: '', email: '', phone: '', privacy: false})
                   }}
-                  className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50"
+                  className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 font-semibold"
+                  style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}
                 >
                   Neue Anfrage starten
                 </button>
@@ -819,16 +721,17 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="text-2xl font-bold mb-4">
-                <span className="text-black">PISTA</span>
-                <span className="text-gray-500 font-normal ml-2">consulting</span>
+              <div className="text-3xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+                <span style={{ color: '#1f1f1e' }}>PISTA</span>
+                <span style={{ color: '#E4002B' }}>.</span>
+                <span className="text-base font-normal ml-2" style={{ color: '#1f1f1e', fontFamily: 'Gomme Sans Regular, sans-serif', letterSpacing: '0.1em' }}>consulting</span>
               </div>
-              <p className="text-gray-600">Auf der richtigen PISTA zum Erfolg</p>
+              <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Auf der richtigen PISTA zum Erfolg</p>
             </div>
 
             <div>
-              <h4 className="font-bold text-gray-900 mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-600">
+              <h4 className="font-bold text-gray-900 mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Services</h4>
+              <ul className="space-y-2 text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
                 <li>Strategieberatung</li>
                 <li>ERP-Integration</li>
                 <li>Digitalisierung</li>
@@ -837,8 +740,8 @@ function App() {
             </div>
 
             <div>
-              <h4 className="font-bold text-gray-900 mb-4">Unternehmen</h4>
-              <ul className="space-y-2 text-gray-600">
+              <h4 className="font-bold text-gray-900 mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Unternehmen</h4>
+              <ul className="space-y-2 text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
                 <li>Über uns</li>
                 <li>Karriere</li>
                 <li>Partner</li>
@@ -847,8 +750,8 @@ function App() {
             </div>
 
             <div>
-              <h4 className="font-bold text-gray-900 mb-4">Kontakt</h4>
-              <ul className="space-y-2 text-gray-600">
+              <h4 className="font-bold text-gray-900 mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Kontakt</h4>
+              <ul className="space-y-2 text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
                 <li>📞 +49 (0) 123 456 789</li>
                 <li>✉️ info@pista.consulting</li>
               </ul>
@@ -856,8 +759,8 @@ function App() {
           </div>
 
           <div className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-600 text-sm">© 2025 PISTA Consulting. Alle Rechte vorbehalten.</p>
-            <div className="flex space-x-6 text-sm text-gray-600 mt-4 md:mt-0">
+            <p className="text-gray-600 text-sm" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>© 2025 PISTA Consulting. Alle Rechte vorbehalten.</p>
+            <div className="flex space-x-6 text-sm text-gray-600 mt-4 md:mt-0" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
               <a href="#" className="hover:text-gray-900">Datenschutz</a>
               <a href="#" className="hover:text-gray-900">Impressum</a>
               <a href="#" className="hover:text-gray-900">AGB</a>
