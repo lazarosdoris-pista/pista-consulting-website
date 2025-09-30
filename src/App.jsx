@@ -346,10 +346,9 @@ function App() {
                       {/* Racing Car with Animation */}
                       <div className="absolute top-1/2 transform -translate-y-1/2 z-10 racing-car-animation">
                         <div 
-                          className="text-2xl sm:text-3xl" 
+                          className="text-xl sm:text-2xl md:text-3xl" 
                           style={{ 
-                            filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.2))',
-                            transform: 'scaleX(-1)'
+                            filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.2))'
                           }}
                         >
                           🏎️
@@ -358,62 +357,63 @@ function App() {
                     </div>
 
                     {/* Milestone Stations */}
-                    <div className="flex justify-between items-start mt-8 sm:mt-10">
+                    <div className="flex justify-between items-start mt-8 sm:mt-10 px-2 sm:px-0">
                       {/* ERP Station */}
-                      <div className="flex flex-col items-center text-center max-w-20 sm:max-w-24">
-                        <div className="relative mb-4">
-                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-md border-2 border-white" style={{ backgroundColor: '#E4002B' }}>
-                            <span className="text-white text-lg sm:text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>1</span>
+                      <div className="flex flex-col items-center text-center w-16 sm:w-20 md:w-24">
+                        <div className="relative mb-3 sm:mb-4">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-md border-2 border-white" style={{ backgroundColor: '#E4002B' }}>
+                            <span className="text-white text-sm sm:text-lg md:text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>1</span>
                           </div>
-                          <div className="absolute -top-1 -right-1 text-sm">🏁</div>
+                          <div className="absolute -top-1 -right-1 text-xs sm:text-sm">🏁</div>
                         </div>
-                        <div className="text-sm sm:text-base font-bold mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>ERP</div>
-                        <div className="text-xs text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>System-Integration</div>
+                        <div className="text-xs sm:text-sm md:text-base font-bold mb-1 leading-tight" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>ERP</div>
+                        <div className="text-xs text-gray-600 leading-tight" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>System-Integration</div>
                       </div>
 
                       {/* Automation Station */}
-                      <div className="flex flex-col items-center text-center max-w-20 sm:max-w-24">
-                        <div className="relative mb-4">
-                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-md border-2 border-white" style={{ backgroundColor: '#E4002B' }}>
-                            <span className="text-white text-lg sm:text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>2</span>
+                      <div className="flex flex-col items-center text-center w-16 sm:w-20 md:w-24">
+                        <div className="relative mb-3 sm:mb-4">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-md border-2 border-white" style={{ backgroundColor: '#E4002B' }}>
+                            <span className="text-white text-sm sm:text-lg md:text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>2</span>
                           </div>
-                          <div className="absolute -top-1 -right-1 text-sm">⚡</div>
+                          <div className="absolute -top-1 -right-1 text-xs sm:text-sm">⚡</div>
                         </div>
-                        <div className="text-sm sm:text-base font-bold mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>AUTOMATISIERUNG</div>
-                        <div className="text-xs text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Prozess-Optimierung</div>
+                        <div className="text-xs sm:text-sm md:text-base font-bold mb-1 leading-tight" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>AUTO</div>
+                        <div className="text-xs text-gray-600 leading-tight" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Prozess-Optimierung</div>
                       </div>
 
                       {/* Digital Station */}
-                      <div className="flex flex-col items-center text-center max-w-20 sm:max-w-24">
-                        <div className="relative mb-4">
-                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-md border-2 border-white" style={{ backgroundColor: '#E4002B' }}>
-                            <span className="text-white text-lg sm:text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>3</span>
+                      <div className="flex flex-col items-center text-center w-16 sm:w-20 md:w-24">
+                        <div className="relative mb-3 sm:mb-4">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-md border-2 border-white" style={{ backgroundColor: '#E4002B' }}>
+                            <span className="text-white text-sm sm:text-lg md:text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>3</span>
                           </div>
-                          <div className="absolute -top-1 -right-1 text-sm">📱</div>
+                          <div className="absolute -top-1 -right-1 text-xs sm:text-sm">📱</div>
                         </div>
-                        <div className="text-sm sm:text-base font-bold mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>DIGITAL</div>
-                        <div className="text-xs text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Mobile Lösungen</div>
+                        <div className="text-xs sm:text-sm md:text-base font-bold mb-1 leading-tight" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>DIGITAL</div>
+                        <div className="text-xs text-gray-600 leading-tight" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Mobile Lösungen</div>
                       </div>
 
                       {/* Finish Station */}
-                      <div className="flex flex-col items-center text-center max-w-20 sm:max-w-24">
-                        <div className="relative mb-4">
-                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center shadow-md border-2 border-white">
-                            <span className="text-white text-lg sm:text-xl" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>🏆</span>
+                      <div className="flex flex-col items-center text-center w-16 sm:w-20 md:w-24">
+                        <div className="relative mb-3 sm:mb-4">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center shadow-md border-2 border-white">
+                            <span className="text-white text-sm sm:text-lg md:text-xl" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>🏆</span>
                           </div>
-                          <div className="absolute -top-1 -right-1 text-sm">✨</div>
+                          <div className="absolute -top-1 -right-1 text-xs sm:text-sm">✨</div>
                         </div>
-                        <div className="text-sm sm:text-base font-bold mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>ZIEL</div>
-                        <div className="text-xs text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Erfolg erreicht</div>
+                        <div className="text-xs sm:text-sm md:text-base font-bold mb-1 leading-tight" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>ZIEL</div>
+                        <div className="text-xs text-gray-600 leading-tight" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Erfolg erreicht</div>
                       </div>
                     </div>
 
                     {/* Progress Bar */}
-                    <div className="mt-6 sm:mt-8">
+                    <div className="mt-6 sm:mt-8 px-2 sm:px-0">
                       <div className="flex items-center justify-between text-xs text-gray-500 mb-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                        <span>Start</span>
-                        <span>Transformations-Reise</span>
-                        <span>Erfolg</span>
+                        <span className="text-xs">Start</span>
+                        <span className="text-xs text-center hidden sm:inline">Transformations-Reise</span>
+                        <span className="text-xs sm:hidden text-center">Transformation</span>
+                        <span className="text-xs">Erfolg</span>
                       </div>
                       <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                         <div className="h-full bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" style={{ width: '75%' }}></div>
