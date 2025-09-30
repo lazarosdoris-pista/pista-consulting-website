@@ -348,7 +348,8 @@ function App() {
                         <div 
                           className="text-xl sm:text-2xl md:text-3xl" 
                           style={{ 
-                            filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.2))'
+                            filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.2))',
+                            transform: 'scaleX(-1)'
                           }}
                         >
                           🏎️
