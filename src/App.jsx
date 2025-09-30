@@ -15,6 +15,52 @@ function App() {
     privacy: false
   })
   const [isFormCompleted, setIsFormCompleted] = useState(false)
+  const [validationErrors, setValidationErrors] = useState({
+    email: '',
+    phone: ''
+  })
+
+  // E-Mail Validierung
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
+
+  // Telefonnummer Validierung (nur Zahlen und optional + am Anfang)
+  const validatePhone = (phone) => {
+    const phoneRegex = /^(\+)?[0-9\s\-\(\)]+$/
+    return phoneRegex.test(phone)
+  }
+
+  // Telefonnummer Input Handler (filtert ungültige Zeichen)
+  const handlePhoneInput = (value) => {
+    // Erlaube nur Zahlen, +, Leerzeichen, Bindestriche und Klammern
+    const filteredValue = value.replace(/[^+0-9\s\-\(\)]/g, '')
+    return filteredValue
+  }
+
+  const handleFormDataChange = (field, value) => {
+    if (field === 'phone') {
+      value = handlePhoneInput(value)
+    }
+    
+    setFormData({...formData, [field]: value})
+    
+    // Validierung in Echtzeit
+    if (field === 'email') {
+      setValidationErrors(prev => ({
+        ...prev,
+        email: value && !validateEmail(value) ? 'Bitte geben Sie eine gültige E-Mail-Adresse ein' : ''
+      }))
+    }
+    
+    if (field === 'phone') {
+      setValidationErrors(prev => ({
+        ...prev,
+        phone: value && !validatePhone(value) ? 'Bitte geben Sie eine gültige Telefonnummer ein' : ''
+      }))
+    }
+  }
 
   const savedHours = Math.round(employees * 1.5)
   const yearlySavings = Math.round(savedHours * hourlyWage * 52)
@@ -656,11 +702,33 @@ function App() {
                       </div>
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-Mail *</label>
-                        <input type="email" id="email" required className="w-full p-3 border rounded-lg" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} />
+                        <input 
+                          type="email" 
+                          id="email" 
+                          required 
+                          className={`w-full p-3 border rounded-lg ${validationErrors.email ? 'border-red-500' : 'border-gray-300'}`}
+                          value={formData.email} 
+                          onChange={(e) => handleFormDataChange('email', e.target.value)}
+                          placeholder="ihre.email@unternehmen.de"
+                        />
+                        {validationErrors.email && (
+                          <p className="text-red-500 text-sm mt-1">{validationErrors.email}</p>
+                        )}
                       </div>
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Telefon *</label>
-                        <input type="tel" id="phone" required className="w-full p-3 border rounded-lg" value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} />
+                        <input 
+                          type="tel" 
+                          id="phone" 
+                          required 
+                          className={`w-full p-3 border rounded-lg ${validationErrors.phone ? 'border-red-500' : 'border-gray-300'}`}
+                          value={formData.phone} 
+                          onChange={(e) => handleFormDataChange('phone', e.target.value)}
+                          placeholder="+49 123 456 789"
+                        />
+                        {validationErrors.phone && (
+                          <p className="text-red-500 text-sm mt-1">{validationErrors.phone}</p>
+                        )}
                       </div>
                     </div>
                     <div className="flex items-start mb-6">
@@ -698,7 +766,7 @@ function App() {
                         } catch (error) {
                           alert('Es gab einen Fehler beim Senden Ihrer Anfrage. Bitte versuchen Sie es erneut.');
                         }
-                      }} disabled={!formData.name || !formData.email || !formData.phone || !formData.privacy} className="px-6 py-3 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>Anfrage senden</button>
+                      }} disabled={!formData.name || !formData.email || !formData.phone || !formData.privacy || validationErrors.email || validationErrors.phone || !validateEmail(formData.email) || !validatePhone(formData.phone)} className="px-6 py-3 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>Anfrage senden</button>
                     </div>
                   </div>
                 )}
