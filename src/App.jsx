@@ -302,37 +302,114 @@ function App() {
                 </p>
               </div>
 
-              {/* Racing Track with Milestones */}
+              {/* Racing Track with Milestones - Redesigned */}
               <div className="relative mb-8 sm:mb-12">
-                {/* Track Background */}
-                <div className="relative h-24 sm:h-32 rounded-lg overflow-hidden" style={{ background: 'linear-gradient(90deg, #f3f4f6 0%, #E4002B 100%)' }}>
-                  {/* Track Lines */}
-                  <div className="absolute top-4 left-0 right-0 h-1 bg-white opacity-50"></div>
-                  <div className="absolute bottom-4 left-0 right-0 h-1 bg-white opacity-50"></div>
-                  
-                  {/* Racing Car */}
-                  <div className="absolute top-1/2 left-4 sm:left-8 transform -translate-y-1/2 text-3xl sm:text-4xl" style={{ transform: 'translateY(-50%) scaleX(-1)' }}>
-                    🏎️
+                {/* Track Container */}
+                <div className="relative bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8 overflow-hidden">
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 opacity-5">
+                    <div className="absolute inset-0" style={{ 
+                      backgroundImage: `repeating-linear-gradient(
+                        45deg,
+                        transparent,
+                        transparent 10px,
+                        #E4002B 10px,
+                        #E4002B 20px
+                      )`
+                    }}></div>
                   </div>
+                  
+                  {/* Track Path */}
+                  <div className="relative">
+                    {/* Main Track Line */}
+                    <div className="relative h-3 sm:h-4 rounded-full bg-gradient-to-r from-gray-200 via-gray-300 to-red-500 shadow-inner">
+                      {/* Track Segments */}
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-gray-200 via-red-200 to-red-500"></div>
+                      
+                      {/* Racing Car with Animation */}
+                      <div className="absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2 left-8 sm:left-12 z-10">
+                        <div className="relative">
+                          <div className="text-2xl sm:text-3xl animate-pulse" style={{ filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))' }}>🏎️</div>
+                          {/* Speed Lines */}
+                          <div className="absolute top-1/2 -left-6 transform -translate-y-1/2 flex space-x-1 opacity-60">
+                            <div className="w-2 h-0.5 bg-gray-400 rounded"></div>
+                            <div className="w-1 h-0.5 bg-gray-400 rounded"></div>
+                            <div className="w-0.5 h-0.5 bg-gray-400 rounded"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-                  {/* Milestone Flags */}
-                  <div className="absolute top-0 left-1/4 transform -translate-x-1/2">
-                    <div className="text-xl sm:text-2xl mb-1 sm:mb-2">🏁</div>
-                    <div className="text-xs text-white font-bold text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>ERP</div>
-                  </div>
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
-                    <div className="text-xl sm:text-2xl mb-1 sm:mb-2">🏁</div>
-                    <div className="text-xs text-white font-bold text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>AUTOMATION</div>
-                  </div>
-                  <div className="absolute top-0 left-3/4 transform -translate-x-1/2">
-                    <div className="text-xl sm:text-2xl mb-1 sm:mb-2">🏁</div>
-                    <div className="text-xs text-white font-bold text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>DIGITAL</div>
-                  </div>
-                  
-                  {/* Finish Line */}
-                  <div className="absolute top-0 right-4 sm:right-8">
-                    <div className="text-2xl sm:text-3xl mb-1 sm:mb-2">🏆</div>
-                    <div className="text-xs text-white font-bold text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>FINISH</div>
+                    {/* Milestone Markers */}
+                    <div className="flex justify-between items-start mt-6 sm:mt-8">
+                      {/* ERP Milestone */}
+                      <div className="flex flex-col items-center group cursor-pointer">
+                        <div className="relative">
+                          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                            <div className="text-white text-lg sm:text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>1</div>
+                          </div>
+                          <div className="absolute -top-2 -right-2 text-lg animate-bounce">🏁</div>
+                        </div>
+                        <div className="mt-3 text-center">
+                          <div className="text-sm sm:text-base font-bold text-gray-800" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>ERP</div>
+                          <div className="text-xs text-gray-600 mt-1" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>System Integration</div>
+                        </div>
+                      </div>
+
+                      {/* Automation Milestone */}
+                      <div className="flex flex-col items-center group cursor-pointer">
+                        <div className="relative">
+                          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                            <div className="text-white text-lg sm:text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>2</div>
+                          </div>
+                          <div className="absolute -top-2 -right-2 text-lg animate-bounce" style={{ animationDelay: '0.2s' }}>⚡</div>
+                        </div>
+                        <div className="mt-3 text-center">
+                          <div className="text-sm sm:text-base font-bold text-gray-800" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>AUTOMATION</div>
+                          <div className="text-xs text-gray-600 mt-1" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Process Optimization</div>
+                        </div>
+                      </div>
+
+                      {/* Digital Milestone */}
+                      <div className="flex flex-col items-center group cursor-pointer">
+                        <div className="relative">
+                          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                            <div className="text-white text-lg sm:text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>3</div>
+                          </div>
+                          <div className="absolute -top-2 -right-2 text-lg animate-bounce" style={{ animationDelay: '0.4s' }}>📱</div>
+                        </div>
+                        <div className="mt-3 text-center">
+                          <div className="text-sm sm:text-base font-bold text-gray-800" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>DIGITAL</div>
+                          <div className="text-xs text-gray-600 mt-1" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Mobile Solutions</div>
+                        </div>
+                      </div>
+
+                      {/* Finish Line */}
+                      <div className="flex flex-col items-center group cursor-pointer">
+                        <div className="relative">
+                          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                            <div className="text-white text-lg sm:text-xl" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>🏆</div>
+                          </div>
+                          <div className="absolute -top-3 -right-3 text-2xl animate-pulse">✨</div>
+                        </div>
+                        <div className="mt-3 text-center">
+                          <div className="text-sm sm:text-base font-bold text-gray-800" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>FINISH</div>
+                          <div className="text-xs text-gray-600 mt-1" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Success Achieved</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Progress Indicator */}
+                    <div className="mt-6 sm:mt-8">
+                      <div className="flex items-center justify-between text-xs text-gray-500 mb-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                        <span>Start</span>
+                        <span>Transformation Journey</span>
+                        <span>Success</span>
+                      </div>
+                      <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
+                        <div className="h-full bg-gradient-to-r from-red-500 to-yellow-500 rounded-full animate-pulse" style={{ width: '75%' }}></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
