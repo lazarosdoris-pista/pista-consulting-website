@@ -2,6 +2,31 @@ import './App.css'
 import { useState } from 'react'
 
 function App() {
+  // Add CSS keyframes for racing car animation
+  const raceCarStyles = `
+    @keyframes raceCarMove {
+      0% { left: 6px; }
+      25% { left: 25%; }
+      50% { left: 50%; }
+      75% { left: 75%; }
+      100% { left: calc(100% - 40px); }
+    }
+    
+    @media (min-width: 640px) {
+      @keyframes raceCarMove {
+        0% { left: 10px; }
+        25% { left: 25%; }
+        50% { left: 50%; }
+        75% { left: 75%; }
+        100% { left: calc(100% - 50px); }
+      }
+    }
+    
+    .racing-car-animation {
+      animation: raceCarMove 8s ease-in-out infinite;
+    }
+  `;
+
   const [employees, setEmployees] = useState(50)
   const [hourlyWage, setHourlyWage] = useState(35)
   const [currentStep, setCurrentStep] = useState(1)
@@ -76,6 +101,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white" style={{ fontFamily: 'Gomme Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+      {/* CSS Styles for Racing Car Animation */}
+      <style dangerouslySetInnerHTML={{ __html: raceCarStyles }} />
       {/* Header */}
       <header className="bg-white border-b border-gray-200 px-4 sm:px-6 py-3 sm:py-4 sticky top-0 z-50">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
@@ -317,35 +344,17 @@ function App() {
                       <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-white opacity-60 transform -translate-y-1/2"></div>
                       
                       {/* Racing Car with Animation */}
-                      <div className="absolute top-1/2 transform -translate-y-1/2 z-10" style={{
-                        animation: 'raceCarMove 8s ease-in-out infinite',
-                        left: '6px'
-                      }}>
-                        <div className="text-2xl sm:text-3xl transform scale-x-[-1]" style={{ 
-                          filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.2))',
-                        }}>🏎️</div>
+                      <div className="absolute top-1/2 transform -translate-y-1/2 z-10 racing-car-animation">
+                        <div 
+                          className="text-2xl sm:text-3xl" 
+                          style={{ 
+                            filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.2))',
+                            transform: 'scaleX(-1)'
+                          }}
+                        >
+                          🏎️
+                        </div>
                       </div>
-                      
-                      {/* CSS Animation Keyframes */}
-                      <style jsx>{`
-                        @keyframes raceCarMove {
-                          0% { left: 6px; }
-                          25% { left: 25%; }
-                          50% { left: 50%; }
-                          75% { left: 75%; }
-                          100% { left: calc(100% - 40px); }
-                        }
-                        
-                        @media (min-width: 640px) {
-                          @keyframes raceCarMove {
-                            0% { left: 10px; }
-                            25% { left: 25%; }
-                            50% { left: 50%; }
-                            75% { left: 75%; }
-                            100% { left: calc(100% - 50px); }
-                          }
-                        }
-                      `}</style>
                     </div>
 
                     {/* Milestone Stations */}
