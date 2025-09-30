@@ -536,35 +536,30 @@ function App() {
 
           <div className="bg-gray-50 p-8 rounded-lg shadow-sm max-w-2xl mx-auto">
             {isFormCompleted ? (
-              <div className="text-center py-12">
-                <div className="text-6xl mb-4">🎉</div>
-                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+              <div className="text-center py-16">
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8">
+                  <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
                   Vielen Dank für Ihre Anfrage!
                 </h3>
-                <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                  Wir haben Ihre Anfrage erhalten und werden uns in Kürze bei Ihnen melden.
+                <p className="text-xl text-gray-600 mb-8" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                  Wir werden uns schnellstmöglich mit Ihnen in Verbindung setzen.
                 </p>
-                <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-md mb-6 text-left" role="alert">
-                  <p className="font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Nächste Schritte:</p>
-                  <ul className="list-disc list-inside mt-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                    <li>Sie erhalten eine Bestätigungs-E-Mail.</li>
-                    <li>Wir prüfen Ihre Angaben und melden uns telefonisch.</li>
-                    <li>Im Telefonat klären wir erste Fragen und vereinbaren einen Termin für die kostenlose Erstberatung.</li>
-                  </ul>
+                <div className="border-t border-gray-200 pt-8">
+                  <button 
+                    onClick={() => { setIsFormCompleted(false); setCurrentStep(1); }}
+                    className="px-8 py-4 text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}
+                  >
+                    Neue Anfrage starten
+                  </button>
                 </div>
-                <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                  Bei dringenden Fragen erreichen Sie uns unter <a href="tel:+49123456789" className="font-bold" style={{ color: '#E4002B' }}>+49 123 456 789</a>.
-                </p>
-                <button 
-                  onClick={() => { setIsFormCompleted(false); setCurrentStep(1); }}
-                  className="px-8 py-4 text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
-                  style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}
-                >
-                  Neue Anfrage starten
-                </button>
               </div>
             ) : (
-              <form onSubmit={(e) => { e.preventDefault(); setIsFormCompleted(true); }}>
+              <div>
                 {currentStep === 1 && (
                   <div>
                     <div className="flex justify-between items-center mb-6">
@@ -674,11 +669,40 @@ function App() {
                     </div>
                     <div className="flex justify-between">
                       <button type="button" onClick={() => setCurrentStep(3)} className="px-6 py-3 border-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors" style={{ borderColor: '#1f1f1e', color: '#1f1f1e', fontFamily: 'Gomme Sans Bold, sans-serif' }}>Zurück</button>
-                      <button type="submit" disabled={!formData.name || !formData.email || !formData.phone || !formData.privacy} className="px-6 py-3 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>Anfrage senden</button>
+                      <button type="button" onClick={async () => {
+                        try {
+                          const response = await fetch('https://formsubmit.co/ajax/lazaros.doris@live.de', {
+                            method: 'POST',
+                            headers: {
+                              'Content-Type': 'application/json',
+                              'Accept': 'application/json'
+                            },
+                            body: JSON.stringify({
+                              name: formData.name,
+                              email: formData.email,
+                              phone: formData.phone,
+                              budget: selectedBudget,
+                              employees: selectedEmployees,
+                              timeline: selectedTimeframe,
+                              _subject: 'Neue Anfrage von Pista Consulting Website',
+                              _template: 'table',
+                              _captcha: 'false'
+                            })
+                          });
+                          
+                          if (response.ok) {
+                            setIsFormCompleted(true);
+                          } else {
+                            alert('Es gab einen Fehler beim Senden Ihrer Anfrage. Bitte versuchen Sie es erneut.');
+                          }
+                        } catch (error) {
+                          alert('Es gab einen Fehler beim Senden Ihrer Anfrage. Bitte versuchen Sie es erneut.');
+                        }
+                      }} disabled={!formData.name || !formData.email || !formData.phone || !formData.privacy} className="px-6 py-3 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>Anfrage senden</button>
                     </div>
                   </div>
                 )}
-              </form>
+              </div>
             )}
           </div>
         </div>

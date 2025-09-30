@@ -12,20 +12,66 @@ export function ContactSection() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
-    employees: '',
     phone: '',
+    budget: '',
+    employees: '',
+    timeline: '',
     message: ''
   })
+
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleInputChange = (field, value) => {
     setFormData(prev => ({ ...prev, [field]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Vielen Dank für Ihre Anfrage! Wir melden uns binnen 24 Stunden bei Ihnen.')
+         console.log(\'Form data before submission:\', formData);
+      const response = await fetch(\'https://formsubmit.co/ajax/lazaros.doris@live.de\', {
+        method: \'POST\',
+        headers: {
+          \'Content-Type\': \'application/json\',
+          \'Accept\': \'application/json\'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          budget: formData.budget,
+          employees: formData.employees,
+          timeline: formData.timeline,
+          message: formData.message,
+          _subject: \'Neue Anfrage von Pista Consulting Website\',
+          _template: \'table\',
+          _captcha: \'false\'
+        })
+      })
+      
+      console.log(\'Response from FormSubmit:\', response);
+
+      if (response.ok) {
+        alert(\'Vielen Dank für Ihre Anfrage! Wir melden uns binnen 24 Stunden bei Ihnen.\')
+        setFormData({
+          name: \'\',
+          email: \'\',
+          phone: \'\',
+          budget: \'\',
+          employees: \'\',
+          timeline: \'\',
+          message: \'\'
+        })
+      } else {
+        const errorText = await response.text();
+        console.error(\'Form submission failed with status:\', response.status, errorText);
+        throw new Error(\'Fehler beim Senden: \' + errorText);
+      }
+    } catch (error) {
+      console.error(\'Caught an error during form submission:\', error);
+      alert(\'Es gab einen Fehler beim Senden Ihrer Anfrage. Bitte versuchen Sie es erneut.\')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
@@ -109,41 +155,59 @@ export function ContactSection() {
                     </div>
                   </div>
 
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Telefon</Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => handleInputChange('phone', e.target.value)}
+                      placeholder="+49 123 456 789"
+                    />
+                  </div>
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="company">Unternehmen *</Label>
-                      <Input
-                        id="company"
-                        value={formData.company}
-                        onChange={(e) => handleInputChange('company', e.target.value)}
-                        placeholder="Ihr Unternehmen"
-                        required
-                      />
+                      <Label htmlFor="budget">Budget *</Label>
+                      <Select onValueChange={(value) => handleInputChange('budget', value)}>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Wählen Sie Ihr Budget" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="10.000€ - 25.000€">10.000€ - 25.000€</SelectItem>
+                          <SelectItem value="25.000€ - 50.000€">25.000€ - 50.000€</SelectItem>
+                          <SelectItem value="50.000€ - 100.000€">50.000€ - 100.000€</SelectItem>
+                          <SelectItem value="100.000€+">100.000€+</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Telefon</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => handleInputChange('phone', e.target.value)}
-                        placeholder="+49 123 456 789"
-                      />
+                      <Label htmlFor="employees">Anzahl Mitarbeiter *</Label>
+                      <Select onValueChange={(value) => handleInputChange('employees', value)}>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Wählen Sie eine Option" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="1-10 Mitarbeiter">1-10 Mitarbeiter</SelectItem>
+                          <SelectItem value="11-25 Mitarbeiter">11-25 Mitarbeiter</SelectItem>
+                          <SelectItem value="26-100 Mitarbeiter">26-100 Mitarbeiter</SelectItem>
+                          <SelectItem value="100+ Mitarbeiter">100+ Mitarbeiter</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="employees">Anzahl Mitarbeiter *</Label>
-                    <Select onValueChange={(value) => handleInputChange('employees', value)}>
+                    <Label htmlFor="timeline">Zeitrahmen *</Label>
+                    <Select onValueChange={(value) => handleInputChange('timeline', value)}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Wählen Sie eine Option" />
+                        <SelectValue placeholder="Wann möchten Sie starten?" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="1-10">1-10 Mitarbeiter</SelectItem>
-                        <SelectItem value="11-25">11-25 Mitarbeiter</SelectItem>
-                        <SelectItem value="26-50">26-50 Mitarbeiter</SelectItem>
-                        <SelectItem value="51-100">51-100 Mitarbeiter</SelectItem>
-                        <SelectItem value="100+">Über 100 Mitarbeiter</SelectItem>
+                        <SelectItem value="Sofort">Sofort</SelectItem>
+                        <SelectItem value="In den nächsten 3 Monaten">In den nächsten 3 Monaten</SelectItem>
+                        <SelectItem value="In den nächsten 6 Monaten">In den nächsten 6 Monaten</SelectItem>
+                        <SelectItem value="In den nächsten 12 Monaten">In den nächsten 12 Monaten</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -171,9 +235,9 @@ export function ContactSection() {
                     </ul>
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full bg-red-600 hover:bg-red-700">
-                    Kostenlose Beratung anfragen
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button type="submit" size="lg" className="w-full bg-red-600 hover:bg-red-700" disabled={isSubmitting}>
+                    {isSubmitting ? 'Wird gesendet...' : 'Kostenlose Beratung anfragen'}
+                    {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
                   </Button>
                 </form>
               </CardContent>
