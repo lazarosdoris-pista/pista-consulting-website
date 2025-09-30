@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Badge } from '@/components/ui/badge'
 import { Mail, Phone, MapPin, CheckCircle, ArrowRight } from 'lucide-react'
 
-export function ContactSection() {
+export function ContactSection({ setShowDatenschutz }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,23 +16,31 @@ export function ContactSection() {
     budget: '',
     employees: '',
     timeline: '',
-    message: ''
+    message: '',
+    privacy: false
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleInputChange = (field, value) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
+    if (field === 'privacyPolicy') {
+      setFormData(prev => ({ ...prev, privacy: !prev.privacy }));
+    } else {
+      setFormData(prev => ({ ...prev, [field]: value }));
+    }
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-         console.log(\'Form data before submission:\', formData);
-      const response = await fetch(\'https://formsubmit.co/ajax/lazaros.doris@live.de\', {
-        method: \'POST\',
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      console.log("Form data before submission:", formData);
+      const response = await fetch("https://formsubmit.co/ajax/lazaros.doris@live.de", {
+        method: "POST",
         headers: {
-          \'Content-Type\': \'application/json\',
-          \'Accept\': \'application/json\'
+          "Content-Type": "application/json",
+          "Accept": "application/json"
         },
         body: JSON.stringify({
           name: formData.name,
@@ -42,37 +50,37 @@ export function ContactSection() {
           employees: formData.employees,
           timeline: formData.timeline,
           message: formData.message,
-          _subject: \'Neue Anfrage von Pista Consulting Website\',
-          _template: \'table\',
-          _captcha: \'false\'
+          _subject: "Neue Anfrage von Pista Consulting Website",
+          _template: "table",
+          _captcha: "false"
         })
-      })
+      });
       
-      console.log(\'Response from FormSubmit:\', response);
+      console.log("Response from FormSubmit:", response);
 
       if (response.ok) {
-        alert(\'Vielen Dank für Ihre Anfrage! Wir melden uns binnen 24 Stunden bei Ihnen.\')
+        alert("Vielen Dank für Ihre Anfrage! Wir melden uns binnen 24 Stunden bei Ihnen.");
         setFormData({
-          name: \'\',
-          email: \'\',
-          phone: \'\',
-          budget: \'\',
-          employees: \'\',
-          timeline: \'\',
-          message: \'\'
-        })
+          name: "",
+          email: "",
+          phone: "",
+          budget: "",
+          employees: "",
+          timeline: "",
+          message: ""
+        });
       } else {
         const errorText = await response.text();
-        console.error(\'Form submission failed with status:\', response.status, errorText);
-        throw new Error(\'Fehler beim Senden: \' + errorText);
+        console.error("Form submission failed with status:", response.status, errorText);
+        throw new Error("Fehler beim Senden: " + errorText);
       }
     } catch (error) {
-      console.error(\'Caught an error during form submission:\', error);
-      alert(\'Es gab einen Fehler beim Senden Ihrer Anfrage. Bitte versuchen Sie es erneut.\')
+      console.error("Caught an error during form submission:", error);
+      alert("Es gab einen Fehler beim Senden Ihrer Anfrage. Bitte versuchen Sie es erneut.");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   const contactInfo = [
     {
@@ -233,6 +241,21 @@ export function ContactSection() {
                       <li>• Individuelle Lösungsvorschläge für Ihr Unternehmen</li>
                       <li>• ROI-Berechnung und Umsetzungsplan</li>
                     </ul>
+                  </div>
+
+                  <div className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      id="privacyPolicy"
+                      name="privacyPolicy"
+                      checked={formData.privacy}
+                      onChange={() => handleInputChange("privacyPolicy")}
+                      required
+                      className="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded"
+                    />
+                    <Label htmlFor="privacyPolicy" className="text-sm text-gray-700">
+                      Ich habe die <a href="#" onClick={() => setShowDatenschutz(true)} className="text-red-600 hover:underline">Datenschutzerklärung</a> gelesen und akzeptiert.
+                    </Label>
                   </div>
 
                   <Button type="submit" size="lg" className="w-full bg-red-600 hover:bg-red-700" disabled={isSubmitting}>

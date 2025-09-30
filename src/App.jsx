@@ -1,5 +1,6 @@
 import './App.css'
 import { useState } from 'react'
+import { ContactSection } from './components/ContactSection'
 
 function App() {
   const [employees, setEmployees] = useState(50)
@@ -717,7 +718,8 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      <ContactSection setShowDatenschutz={setShowDatenschutz} />
+
       <section id="contact" className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -882,7 +884,7 @@ function App() {
                     </div>
                     <div className="flex items-start mb-6">
                       <input type="checkbox" id="privacy" required className="h-4 w-4 text-red-600 border-gray-300 rounded mt-1" checked={formData.privacy} onChange={(e) => setFormData({...formData, privacy: e.target.checked})} />
-                      <label htmlFor="privacy" className="ml-2 text-sm text-gray-600">Ich akzeptiere die <span className="text-red-500 cursor-pointer hover:underline" onClick={() => setShowPrivacyPolicy(true)}>Datenschutzerklärung</span> und stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden. *</label>
+                      <label htmlFor="privacy" className="ml-2 text-sm text-gray-600">Ich akzeptiere die <span className="text-red-500 cursor-pointer hover:underline" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setShowPrivacyPolicy(true); }}>Datenschutzerklärung</span> und stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden. *</label>
                     </div>
                     <div className="flex justify-between">
                       <button type="button" onClick={() => setCurrentStep(3)} className="px-6 py-3 border-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors" style={{ borderColor: '#1f1f1e', color: '#1f1f1e', fontFamily: 'Gomme Sans Bold, sans-serif' }}>Zurück</button>
