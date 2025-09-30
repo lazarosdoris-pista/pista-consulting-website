@@ -882,7 +882,7 @@ function App() {
                     </div>
                     <div className="flex items-start mb-6">
                       <input type="checkbox" id="privacy" required className="h-4 w-4 text-red-600 border-gray-300 rounded mt-1" checked={formData.privacy} onChange={(e) => setFormData({...formData, privacy: e.target.checked})} />
-                      <label htmlFor="privacy" className="ml-2 text-sm text-gray-600">Ich akzeptiere die <a href="#" className="underline" style={{ color: '#E4002B' }}>Datenschutzerklärung</a> und stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden. *</label>
+                      <label htmlFor="privacy" className="ml-2 text-sm text-gray-600">Ich akzeptiere die <span className="text-red-500 cursor-pointer hover:underline" onClick={() => setShowPrivacyPolicy(true)}>Datenschutzerklärung</span> und stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden. *</label>
                     </div>
                     <div className="flex justify-between">
                       <button type="button" onClick={() => setCurrentStep(3)} className="px-6 py-3 border-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors" style={{ borderColor: '#1f1f1e', color: '#1f1f1e', fontFamily: 'Gomme Sans Bold, sans-serif' }}>Zurück</button>
