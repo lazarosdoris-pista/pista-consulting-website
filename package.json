@@ -1,29 +1,7 @@
 {
-  "name": "pista-consulting-react",
-  "private": false,
-  "version": "1.0.0",
-  "description": "PISTA Consulting - Professionelle Digitalisierung für deutsche KMUs",
-  "author": "PISTA Consulting",
-  "license": "MIT",
-  "homepage": "https://pista.consulting",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pista-consulting/react-website.git"
-  },
-  "keywords": [
-    "react",
-    "vite",
-    "digitalisierung",
-    "kmu",
-    "erp",
-    "strategieberatung",
-    "odoo",
-    "business-software"
-  ],
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  },
+  "name": "pista-consulting-optimized",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
