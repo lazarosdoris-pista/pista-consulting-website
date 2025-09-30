@@ -316,10 +316,36 @@ function App() {
                       {/* Track Center Line */}
                       <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-white opacity-60 transform -translate-y-1/2"></div>
                       
-                      {/* Racing Car */}
-                      <div className="absolute top-1/2 left-6 sm:left-10 transform -translate-y-1/2 z-10">
-                        <div className="text-2xl sm:text-3xl" style={{ filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.2))' }}>🏎️</div>
+                      {/* Racing Car with Animation */}
+                      <div className="absolute top-1/2 transform -translate-y-1/2 z-10" style={{
+                        animation: 'raceCarMove 8s ease-in-out infinite',
+                        left: '6px'
+                      }}>
+                        <div className="text-2xl sm:text-3xl transform scale-x-[-1]" style={{ 
+                          filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.2))',
+                        }}>🏎️</div>
                       </div>
+                      
+                      {/* CSS Animation Keyframes */}
+                      <style jsx>{`
+                        @keyframes raceCarMove {
+                          0% { left: 6px; }
+                          25% { left: 25%; }
+                          50% { left: 50%; }
+                          75% { left: 75%; }
+                          100% { left: calc(100% - 40px); }
+                        }
+                        
+                        @media (min-width: 640px) {
+                          @keyframes raceCarMove {
+                            0% { left: 10px; }
+                            25% { left: 25%; }
+                            50% { left: 50%; }
+                            75% { left: 75%; }
+                            100% { left: calc(100% - 50px); }
+                          }
+                        }
+                      `}</style>
                     </div>
 
                     {/* Milestone Stations */}
