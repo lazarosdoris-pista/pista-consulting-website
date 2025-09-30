@@ -126,10 +126,10 @@ function App() {
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-            Effizienz steigern mit der richtigen Digitalisierung
+            Auf der Überholspur zur digitalen Transformation
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-            Wir helfen mittelständischen Unternehmen dabei, ihre Prozesse zu optimieren und durch strategische Digitalisierung nachhaltiges Wachstum zu erzielen.
+            Wie ein Rennwagen auf der idealen Rennstrecke bringen wir Ihr Unternehmen mit Präzision und Geschwindigkeit ans Ziel. Strategische Digitalisierung für nachhaltigen Erfolg.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
@@ -201,10 +201,10 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-              Die PISTA-Methode: Ihr Weg zum Erfolg
+              Die PISTA-Rennstrecke: Präzise. Schnell. Zielführend.
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-              Unser bewährter 3-Schritte-Prozess bringt Sie sicher ans Ziel
+              Wie auf einer perfekt geplanten Rennstrecke führen wir Sie mit maximaler Geschwindigkeit und Präzision zum Ziel
             </p>
           </div>
 
@@ -214,10 +214,10 @@ function App() {
                 1
               </div>
               <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                Analyse & Strategie
+                Streckenanalyse & Routenplanung
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                Wir analysieren Ihre aktuellen Prozesse und entwickeln eine maßgeschneiderte Digitalisierungsstrategie, die zu Ihrem Unternehmen passt.
+                Wie ein Rennfahrer die Strecke studiert, analysieren wir Ihre Prozesse und planen die optimale Route zur digitalen Transformation.
               </p>
             </div>
 
@@ -226,10 +226,10 @@ function App() {
                 2
               </div>
               <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                Implementierung
+                Vollgas-Umsetzung
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                Schritt für Schritt setzen wir die Lösung um. Mit klaren Meilensteinen, transparenter Kommunikation und ohne böse Überraschungen.
+                Mit der Präzision eines Formel-1-Teams setzen wir Ihre Lösung um. Klare Meilensteine, perfektes Timing und keine Überraschungen.
               </p>
             </div>
 
@@ -238,10 +238,10 @@ function App() {
                 3
               </div>
               <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                Optimierung
+                Feintuning & Performance
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                Nach dem Go-Live optimieren wir kontinuierlich. Ihre Mitarbeiter werden geschult und Sie erhalten langfristigen Support.
+                Wie ein Rennwagen nach dem Rennen optimiert wird, verfeinern wir kontinuierlich Ihre Systeme für maximale Performance.
               </p>
             </div>
           </div>
@@ -314,10 +314,10 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-              Transparente Preise, maximaler Wert
+              Ihre Pole Position: Schnell. Präzise. Erfolgreich.
             </h2>
             <p className="text-xl text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-              Einmalige Investition für lebenslange Vorteile
+              Einmalige Investition für maximale Performance - wie ein Rennwagen für die Überholspur
             </p>
           </div>
 
@@ -516,10 +516,10 @@ function App() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-              Berechnen Sie Ihr Einsparpotenzial
+              Ihr Performance-Check: Wie schnell werden Sie?
             </h2>
             <p className="text-xl text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-              Finden Sie heraus, wie viel Ihre Digitalisierung einsparen kann
+              Berechnen Sie in Sekunden, wie viel Geschwindigkeit und Effizienz Sie gewinnen können
             </p>
           </div>
 
@@ -573,10 +573,10 @@ function App() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-              Kostenlose Erstberatung sichern
+              Startschuss für Ihre Überholspur
             </h2>
             <p className="text-xl text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-              Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden bei Ihnen.
+              Kostenlose Erstberatung in 4 einfachen Schritten. Wir melden uns innerhalb von 24 Stunden bei Ihnen.
             </p>
           </div>
 
@@ -785,7 +785,7 @@ function App() {
               <span style={{ color: '#E4002B' }}>.</span>
               <span className="text-base font-normal ml-2" style={{ color: 'white', fontFamily: 'Gomme Sans Regular, sans-serif', letterSpacing: '0.1em' }}>consulting</span>
             </div>
-            <p className="text-gray-400" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Effizienz steigern mit der richtigen Digitalisierung.</p>
+            <p className="text-gray-400" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Auf der Überholspur zur digitalen Transformation.</p>
           </div>
           <div>
             <h4 className="font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Navigation</h4>
