@@ -103,9 +103,12 @@ function App() {
 
       {/* Red Banner */}
       <div className="py-3 text-center text-white" style={{ backgroundColor: '#E4002B' }}>
-        <div className="flex items-center justify-center space-x-4">
-          <span style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>📞 Kostenlose Erstberatung - Begrenzte Kapazitäten</span>
-          <div className="flex space-x-4 text-sm">
+        <div className="flex items-center justify-center space-x-6">
+          <div className="flex items-center space-x-2">
+            <span className="text-xl">🏁</span>
+            <span style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Kostenlose Pole-Position-Beratung - Nur noch wenige Plätze frei!</span>
+          </div>
+          <div className="flex items-center space-x-4 text-sm">
             <div className="text-center">
               <div className="text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>6</div>
               <div className="text-xs" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Tage</div>
@@ -163,33 +166,33 @@ function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="text-4xl mb-4">🔄</div>
+            <div className="bg-white p-8 rounded-lg shadow-sm border-l-4" style={{ borderLeftColor: '#E4002B' }}>
+              <div className="text-4xl mb-4">🚧</div>
               <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                Chaos in der IT-Landschaft
+                Stau in der IT-Landschaft
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                Verschiedene Systeme, die nicht miteinander kommunizieren. Doppelte Dateneingaben und ineffiziente Prozesse kosten Zeit und Geld.
+                Verschiedene Systeme blockieren sich gegenseitig. Wie im Verkehrsstau kosten doppelte Dateneingaben und ineffiziente Prozesse wertvolle Zeit und Geld.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="text-4xl mb-4">❓</div>
+            <div className="bg-white p-8 rounded-lg shadow-sm border-l-4" style={{ borderLeftColor: '#E4002B' }}>
+              <div className="text-4xl mb-4">🗺️</div>
               <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                Fehlende Digitalisierungsstrategie
+                Fahren ohne Navigationssystem
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                Ohne klaren Plan werden IT-Projekte zu Kostenfallen. Technologie wird implementiert, ohne den tatsächlichen Nutzen zu berücksichtigen.
+                Ohne klare Digitalisierungs-Roadmap werden IT-Projekte zu kostspieligen Umwegen. Technologie wird implementiert, ohne das Ziel zu kennen.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="text-4xl mb-4">⏰</div>
+            <div className="bg-white p-8 rounded-lg shadow-sm border-l-4" style={{ borderLeftColor: '#E4002B' }}>
+              <div className="text-4xl mb-4">🏁</div>
               <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                Endlose IT-Projekte
+                Endlos-Rennen ohne Ziellinie
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                Projekte dauern länger als geplant, Budgets werden überschritten und am Ende funktioniert das System nicht wie gewünscht.
+                IT-Projekte ohne klares Finish: Budgets werden überschritten, Deadlines verpasst und am Ende funktioniert das System nicht wie gewünscht.
               </p>
             </div>
           </div>
@@ -248,9 +251,9 @@ function App() {
         </div>
       </section>
 
-      {/* Success Story Section */}
+      {/* Success Story Section - Rennstrecken Timeline */}
       <section id="success" className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
               Erfolgsgeschichte: Bavaria Heizungstechnik
@@ -260,46 +263,188 @@ function App() {
             </p>
           </div>
 
-          <div className="bg-white rounded-lg p-8 shadow-sm">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                  Die Herausforderung
-                </h3>
-                <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+          {/* Racing Track Timeline */}
+          <div className="bg-white rounded-lg p-8 shadow-sm overflow-hidden">
+            <div className="relative">
+              {/* Start: Die Herausforderung */}
+              <div className="mb-12">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-bold mr-4" style={{ backgroundColor: '#1f1f1e', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+                    🏁
+                  </div>
+                  <h3 className="text-2xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Die Herausforderung
+                  </h3>
+                </div>
+                <p className="text-gray-600 max-w-2xl mx-auto text-center" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
                   Bavaria Heizungstechnik, ein Familienunternehmen mit 45 Mitarbeitern, kämpfte mit veralteten Systemen. Angebote wurden noch in Excel erstellt, die Lagerverwaltung lief über Zettelwirtschaft und Kundendaten waren über verschiedene Systeme verstreut.
                 </p>
-                <h4 className="text-lg font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                  Unsere Lösung
-                </h4>
-                <ul className="space-y-2 text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                  <li>✅ Integrierte ERP-Lösung für alle Geschäftsprozesse</li>
-                  <li>✅ Automatisierte Angebotserstellung</li>
-                  <li>✅ Digitale Lagerverwaltung mit Barcode-Scanner</li>
-                  <li>✅ Mobile App für Techniker vor Ort</li>
-                  <li>✅ Kundendatenbank mit 360°-Sicht</li>
-                </ul>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-lg font-bold mb-6 text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                  Messbare Ergebnisse nach 6 Monaten
+              {/* Racing Track with Milestones */}
+              <div className="relative mb-12">
+                {/* Track Background */}
+                <div className="relative h-32 rounded-lg overflow-hidden" style={{ background: 'linear-gradient(90deg, #f3f4f6 0%, #E4002B 100%)' }}>
+                  {/* Track Lines */}
+                  <div className="absolute top-4 left-0 right-0 h-1 bg-white opacity-50"></div>
+                  <div className="absolute bottom-4 left-0 right-0 h-1 bg-white opacity-50"></div>
+                  
+                  {/* Racing Car */}
+                  <div className="absolute top-1/2 left-8 transform -translate-y-1/2 text-4xl" style={{ transform: 'translateY(-50%) scaleX(-1)' }}>
+                    🏎️
+                  </div>
+
+                  {/* Milestone Flags */}
+                  <div className="absolute top-0 left-1/4 transform -translate-x-1/2">
+                    <div className="text-2xl mb-2">🏁</div>
+                    <div className="text-xs text-white font-bold text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>ERP</div>
+                  </div>
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
+                    <div className="text-2xl mb-2">🏁</div>
+                    <div className="text-xs text-white font-bold text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>AUTOMATION</div>
+                  </div>
+                  <div className="absolute top-0 left-3/4 transform -translate-x-1/2">
+                    <div className="text-2xl mb-2">🏁</div>
+                    <div className="text-xs text-white font-bold text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>DIGITAL</div>
+                  </div>
+                  
+                  {/* Finish Line */}
+                  <div className="absolute top-0 right-8">
+                    <div className="text-3xl mb-2">🏆</div>
+                    <div className="text-xs text-white font-bold text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>FINISH</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Solution Points */}
+              <div className="mb-12">
+                <h4 className="text-xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                  Unsere Rennstrecke zum Erfolg
                 </h4>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="flex items-center p-4 bg-gray-50 rounded-lg">
+                    <div className="text-2xl mr-3" style={{ color: '#E4002B' }}>🏁</div>
+                    <div>
+                      <div className="font-bold text-sm" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>ERP-Integration</div>
+                      <div className="text-xs text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Alle Systeme vereint</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center p-4 bg-gray-50 rounded-lg">
+                    <div className="text-2xl mr-3" style={{ color: '#E4002B' }}>⚡</div>
+                    <div>
+                      <div className="font-bold text-sm" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>Automatisierung</div>
+                      <div className="text-xs text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Prozesse beschleunigt</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center p-4 bg-gray-50 rounded-lg">
+                    <div className="text-2xl mr-3" style={{ color: '#E4002B' }}>📱</div>
+                    <div>
+                      <div className="font-bold text-sm" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>Mobile Lösung</div>
+                      <div className="text-xs text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Technik vor Ort</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Performance Results - Speedometer Style */}
+              <div className="bg-gray-50 p-8 rounded-lg">
+                <h4 className="text-xl font-bold mb-8 text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                  Performance-Ergebnisse nach 6 Monaten
+                </h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>40%</div>
+                    <div className="relative w-20 h-20 mx-auto mb-4">
+                      <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
+                        <path
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                          fill="none"
+                          stroke="#e5e7eb"
+                          strokeWidth="2"
+                        />
+                        <path
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                          fill="none"
+                          stroke="#E4002B"
+                          strokeWidth="2"
+                          strokeDasharray="40, 100"
+                        />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-lg font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>40%</span>
+                      </div>
+                    </div>
                     <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Zeitersparnis bei Angeboten</div>
                   </div>
+                  
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>€180k</div>
+                    <div className="relative w-20 h-20 mx-auto mb-4">
+                      <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
+                        <path
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                          fill="none"
+                          stroke="#e5e7eb"
+                          strokeWidth="2"
+                        />
+                        <path
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                          fill="none"
+                          stroke="#E4002B"
+                          strokeWidth="2"
+                          strokeDasharray="100, 100"
+                        />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-sm font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>€180k</span>
+                      </div>
+                    </div>
                     <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Jährliche Kosteneinsparung</div>
                   </div>
+                  
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>25%</div>
+                    <div className="relative w-20 h-20 mx-auto mb-4">
+                      <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
+                        <path
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                          fill="none"
+                          stroke="#e5e7eb"
+                          strokeWidth="2"
+                        />
+                        <path
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                          fill="none"
+                          stroke="#E4002B"
+                          strokeWidth="2"
+                          strokeDasharray="25, 100"
+                        />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-lg font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>25%</span>
+                      </div>
+                    </div>
                     <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Weniger Lagerkosten</div>
                   </div>
+                  
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>95%</div>
+                    <div className="relative w-20 h-20 mx-auto mb-4">
+                      <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
+                        <path
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                          fill="none"
+                          stroke="#e5e7eb"
+                          strokeWidth="2"
+                        />
+                        <path
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                          fill="none"
+                          stroke="#E4002B"
+                          strokeWidth="2"
+                          strokeDasharray="95, 100"
+                        />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-lg font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#E4002B' }}>95%</span>
+                      </div>
+                    </div>
                     <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Mitarbeiterzufriedenheit</div>
                   </div>
                 </div>
@@ -325,7 +470,7 @@ function App() {
             {/* PISTA Starter */}
             <div className="bg-white p-8 rounded-lg shadow-sm flex flex-col">
               <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                PISTA Starter
+                🏁 PISTA Starter
               </h3>
               <div className="text-4xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
                 €12.999
@@ -385,11 +530,11 @@ function App() {
             <div className="bg-white p-8 rounded-lg shadow-sm border-2 flex flex-col" style={{ borderColor: '#E4002B' }}>
               <div className="text-center mb-4">
                 <span className="px-3 py-1 text-sm text-white rounded-sm" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
-                  EMPFOHLEN
+                  🏆 POLE POSITION
                 </span>
               </div>
               <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                PISTA Professional
+                🏆 PISTA Professional
               </h3>
               <div className="text-4xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
                 €24.999
@@ -450,7 +595,7 @@ function App() {
             {/* PISTA Enterprise */}
             <div className="bg-white p-8 rounded-lg shadow-sm flex flex-col">
               <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                PISTA Enterprise
+                🏎️ PISTA Enterprise
               </h3>
               <div className="text-4xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
                 €49.999
