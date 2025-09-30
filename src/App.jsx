@@ -302,37 +302,88 @@ function App() {
                 </p>
               </div>
 
-              {/* Racing Track with Milestones */}
+              {/* Racing Track with Milestones - Improved Design */}
               <div className="relative mb-8 sm:mb-12">
-                {/* Track Background */}
-                <div className="relative h-24 sm:h-32 rounded-lg overflow-hidden" style={{ background: 'linear-gradient(90deg, #f3f4f6 0%, #E4002B 100%)' }}>
-                  {/* Track Lines */}
-                  <div className="absolute top-4 left-0 right-0 h-1 bg-white opacity-50"></div>
-                  <div className="absolute bottom-4 left-0 right-0 h-1 bg-white opacity-50"></div>
-                  
-                  {/* Racing Car */}
-                  <div className="absolute top-1/2 left-4 sm:left-8 transform -translate-y-1/2 text-3xl sm:text-4xl" style={{ transform: 'translateY(-50%) scaleX(-1)' }}>
-                    🏎️
-                  </div>
+                {/* Track Container with Clean Design */}
+                <div className="relative bg-white rounded-xl shadow-sm border border-gray-100 p-6 sm:p-8">
+                  {/* Track Background with Subtle Pattern */}
+                  <div className="relative">
+                    {/* Main Track */}
+                    <div className="relative h-6 sm:h-8 rounded-full bg-gradient-to-r from-gray-100 via-gray-200 to-red-100 border border-gray-200 shadow-inner">
+                      {/* Track Progress */}
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-gray-300 via-red-300 to-red-500 opacity-80"></div>
+                      
+                      {/* Track Center Line */}
+                      <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-white opacity-60 transform -translate-y-1/2"></div>
+                      
+                      {/* Racing Car */}
+                      <div className="absolute top-1/2 left-6 sm:left-10 transform -translate-y-1/2 z-10">
+                        <div className="text-2xl sm:text-3xl" style={{ filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.2))' }}>🏎️</div>
+                      </div>
+                    </div>
 
-                  {/* Milestone Flags */}
-                  <div className="absolute top-0 left-1/4 transform -translate-x-1/2">
-                    <div className="text-xl sm:text-2xl mb-1 sm:mb-2">🏁</div>
-                    <div className="text-xs text-white font-bold text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>ERP</div>
-                  </div>
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
-                    <div className="text-xl sm:text-2xl mb-1 sm:mb-2">🏁</div>
-                    <div className="text-xs text-white font-bold text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>AUTOMATION</div>
-                  </div>
-                  <div className="absolute top-0 left-3/4 transform -translate-x-1/2">
-                    <div className="text-xl sm:text-2xl mb-1 sm:mb-2">🏁</div>
-                    <div className="text-xs text-white font-bold text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>DIGITAL</div>
-                  </div>
-                  
-                  {/* Finish Line */}
-                  <div className="absolute top-0 right-4 sm:right-8">
-                    <div className="text-2xl sm:text-3xl mb-1 sm:mb-2">🏆</div>
-                    <div className="text-xs text-white font-bold text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>FINISH</div>
+                    {/* Milestone Stations */}
+                    <div className="flex justify-between items-start mt-8 sm:mt-10">
+                      {/* ERP Station */}
+                      <div className="flex flex-col items-center text-center max-w-20 sm:max-w-24">
+                        <div className="relative mb-4">
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-md border-2 border-white" style={{ backgroundColor: '#E4002B' }}>
+                            <span className="text-white text-lg sm:text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>1</span>
+                          </div>
+                          <div className="absolute -top-1 -right-1 text-sm">🏁</div>
+                        </div>
+                        <div className="text-sm sm:text-base font-bold mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>ERP</div>
+                        <div className="text-xs text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>System-Integration</div>
+                      </div>
+
+                      {/* Automation Station */}
+                      <div className="flex flex-col items-center text-center max-w-20 sm:max-w-24">
+                        <div className="relative mb-4">
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-md border-2 border-white" style={{ backgroundColor: '#E4002B' }}>
+                            <span className="text-white text-lg sm:text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>2</span>
+                          </div>
+                          <div className="absolute -top-1 -right-1 text-sm">⚡</div>
+                        </div>
+                        <div className="text-sm sm:text-base font-bold mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>AUTOMATISIERUNG</div>
+                        <div className="text-xs text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Prozess-Optimierung</div>
+                      </div>
+
+                      {/* Digital Station */}
+                      <div className="flex flex-col items-center text-center max-w-20 sm:max-w-24">
+                        <div className="relative mb-4">
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-md border-2 border-white" style={{ backgroundColor: '#E4002B' }}>
+                            <span className="text-white text-lg sm:text-xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>3</span>
+                          </div>
+                          <div className="absolute -top-1 -right-1 text-sm">📱</div>
+                        </div>
+                        <div className="text-sm sm:text-base font-bold mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>DIGITAL</div>
+                        <div className="text-xs text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Mobile Lösungen</div>
+                      </div>
+
+                      {/* Finish Station */}
+                      <div className="flex flex-col items-center text-center max-w-20 sm:max-w-24">
+                        <div className="relative mb-4">
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center shadow-md border-2 border-white">
+                            <span className="text-white text-lg sm:text-xl" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>🏆</span>
+                          </div>
+                          <div className="absolute -top-1 -right-1 text-sm">✨</div>
+                        </div>
+                        <div className="text-sm sm:text-base font-bold mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>ZIEL</div>
+                        <div className="text-xs text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Erfolg erreicht</div>
+                      </div>
+                    </div>
+
+                    {/* Progress Bar */}
+                    <div className="mt-6 sm:mt-8">
+                      <div className="flex items-center justify-between text-xs text-gray-500 mb-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                        <span>Start</span>
+                        <span>Transformations-Reise</span>
+                        <span>Erfolg</span>
+                      </div>
+                      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                        <div className="h-full bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" style={{ width: '75%' }}></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
