@@ -6,6 +6,15 @@ function App() {
   const [hourlyWage, setHourlyWage] = useState(35)
   const [currentStep, setCurrentStep] = useState(1)
   const [selectedBudget, setSelectedBudget] = useState('')
+  const [selectedEmployees, setSelectedEmployees] = useState('')
+  const [selectedTimeframe, setSelectedTimeframe] = useState('')
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    privacy: false
+  })
+  const [isFormCompleted, setIsFormCompleted] = useState(false)
 
   const savedHours = Math.round(employees * 1.5)
   const yearlySavings = Math.round(savedHours * hourlyWage * 52)
@@ -584,41 +593,221 @@ function App() {
               </div>
             </div>
 
-            {currentStep === 1 && (
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-6">IT-Budget</h3>
-                <p className="text-gray-700 mb-6">Wie hoch ist Ihr jährliches IT-Budget? *</p>
-                
-                <div className="grid grid-cols-2 gap-4 mb-8">
-                  {['< 50.000€', '50.000€ - 100.000€', '100.000€ - 250.000€', '> 250.000€'].map((budget) => (
-                    <button
-                      key={budget}
-                      onClick={() => setSelectedBudget(budget)}
-                      className={`p-4 border rounded-lg text-left hover:bg-gray-50 ${
-                        selectedBudget === budget ? 'border-red-600 bg-red-50' : 'border-gray-300'
-                      }`}
+            {!isFormCompleted ? (
+              <>
+                {/* Schritt 1: IT-Budget */}
+                {currentStep === 1 && (
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-6">IT-Budget</h3>
+                    <p className="text-gray-700 mb-6">Wie hoch ist Ihr jährliches IT-Budget? *</p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-8">
+                      {['< 50.000€', '50.000€ - 100.000€', '100.000€ - 250.000€', '> 250.000€'].map((budget) => (
+                        <button
+                          key={budget}
+                          onClick={() => setSelectedBudget(budget)}
+                          className={`p-4 border rounded-lg text-left hover:bg-gray-50 ${
+                            selectedBudget === budget ? 'border-red-600 bg-red-50' : 'border-gray-300'
+                          }`}
+                        >
+                          {budget}
+                        </button>
+                      ))}
+                    </div>
+
+                    <button 
+                      onClick={() => setCurrentStep(2)}
+                      disabled={!selectedBudget}
+                      className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg disabled:opacity-50 flex items-center"
                     >
-                      {budget}
+                      Weiter →
                     </button>
-                  ))}
-                </div>
+                  </div>
+                )}
 
-                <button 
-                  onClick={() => setCurrentStep(2)}
-                  disabled={!selectedBudget}
-                  className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-lg disabled:opacity-50"
-                >
-                  Weiter
-                </button>
-              </div>
-            )}
+                {/* Schritt 2: Unternehmensgröße */}
+                {currentStep === 2 && (
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-6">Unternehmensgröße</h3>
+                    <p className="text-gray-700 mb-6">Wie viele Mitarbeiter hat Ihr Unternehmen? *</p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-8">
+                      {['1-25', '26-100', '101-500', '> 500'].map((size) => (
+                        <button
+                          key={size}
+                          onClick={() => setSelectedEmployees(size)}
+                          className={`p-4 border rounded-lg text-left hover:bg-gray-50 ${
+                            selectedEmployees === size ? 'border-red-600 bg-red-50' : 'border-gray-300'
+                          }`}
+                        >
+                          {size}
+                        </button>
+                      ))}
+                    </div>
 
-            {currentStep > 1 && (
-              <div className="text-center">
-                <p className="text-gray-600 mb-4">Vielen Dank für Ihr Interesse!</p>
-                <p className="text-gray-600">
-                  Unsere Experten werden sich binnen 24 Stunden bei Ihnen melden, um die weiteren Schritte zu besprechen.
+                    <div className="flex justify-between">
+                      <button 
+                        onClick={() => setCurrentStep(1)}
+                        className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50"
+                      >
+                        Zurück
+                      </button>
+                      <button 
+                        onClick={() => setCurrentStep(3)}
+                        disabled={!selectedEmployees}
+                        className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg disabled:opacity-50 flex items-center"
+                      >
+                        Weiter →
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* Schritt 3: Zeitrahmen */}
+                {currentStep === 3 && (
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-6">Zeitrahmen</h3>
+                    <p className="text-gray-700 mb-6">Wann möchten Sie mit der Digitalisierung starten? *</p>
+                    
+                    <div className="space-y-4 mb-8">
+                      {['Sofort', 'In den nächsten 3 Monaten', 'In den nächsten 6 Monaten', 'Nächstes Jahr'].map((timeframe) => (
+                        <button
+                          key={timeframe}
+                          onClick={() => setSelectedTimeframe(timeframe)}
+                          className={`w-full p-4 border rounded-lg text-left hover:bg-gray-50 ${
+                            selectedTimeframe === timeframe ? 'border-red-600 bg-red-50' : 'border-gray-300'
+                          } ${timeframe === 'In den nächsten 3 Monaten' ? 'bg-gray-900 text-white border-gray-900' : ''}`}
+                        >
+                          {timeframe}
+                        </button>
+                      ))}
+                    </div>
+
+                    <div className="flex justify-between">
+                      <button 
+                        onClick={() => setCurrentStep(2)}
+                        className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50"
+                      >
+                        Zurück
+                      </button>
+                      <button 
+                        onClick={() => setCurrentStep(4)}
+                        disabled={!selectedTimeframe}
+                        className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg disabled:opacity-50 flex items-center"
+                      >
+                        Weiter →
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* Schritt 4: Kontaktdaten */}
+                {currentStep === 4 && (
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-6">Kontaktdaten</h3>
+                    
+                    <div className="space-y-6 mb-8">
+                      <div>
+                        <label className="block text-gray-700 font-medium mb-2">Name *</label>
+                        <input
+                          type="text"
+                          value={formData.name}
+                          onChange={(e) => setFormData({...formData, name: e.target.value})}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-gray-700 font-medium mb-2">E-Mail *</label>
+                        <input
+                          type="email"
+                          value={formData.email}
+                          onChange={(e) => setFormData({...formData, email: e.target.value})}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-gray-700 font-medium mb-2">Telefon *</label>
+                        <input
+                          type="tel"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                        />
+                      </div>
+
+                      <div className="flex items-start space-x-3">
+                        <input
+                          type="checkbox"
+                          id="privacy"
+                          checked={formData.privacy}
+                          onChange={(e) => setFormData({...formData, privacy: e.target.checked})}
+                          className="mt-1"
+                        />
+                        <label htmlFor="privacy" className="text-sm text-gray-700">
+                          Ich akzeptiere die{' '}
+                          <a href="#" className="text-red-600 underline">Datenschutzerklärung</a>{' '}
+                          und stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden. *
+                        </label>
+                      </div>
+                    </div>
+
+                    <div className="flex justify-between">
+                      <button 
+                        onClick={() => setCurrentStep(3)}
+                        className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50"
+                      >
+                        Zurück
+                      </button>
+                      <button 
+                        onClick={() => setIsFormCompleted(true)}
+                        disabled={!formData.name || !formData.email || !formData.phone || !formData.privacy}
+                        className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg disabled:opacity-50 flex items-center"
+                      >
+                        Weiter →
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </>
+            ) : (
+              /* Dankesnachricht */
+              <div className="text-center py-12">
+                <div className="text-6xl mb-6">🎉</div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Vielen Dank!</h3>
+                <p className="text-xl text-gray-600 mb-6">
+                  Ihre Anfrage wurde erfolgreich übermittelt.
                 </p>
+                <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                  <div className="flex items-center justify-center space-x-2 text-green-800 mb-4">
+                    <span className="text-2xl">✓</span>
+                    <span className="font-semibold">Was passiert als nächstes?</span>
+                  </div>
+                  <ul className="text-left text-green-700 space-y-2">
+                    <li>• Unser Experte meldet sich binnen 24 Stunden bei Ihnen</li>
+                    <li>• Kostenlose 30-minütige Strategieberatung per Telefon</li>
+                    <li>• Individuelle Analyse Ihres Digitalisierungspotenzials</li>
+                    <li>• Unverbindliches Angebot basierend auf Ihren Anforderungen</li>
+                  </ul>
+                </div>
+                <p className="text-gray-600 mb-8">
+                  Haben Sie noch Fragen? Rufen Sie uns gerne direkt an:<br/>
+                  <strong className="text-gray-900">📞 +49 (0) 123 456 789</strong>
+                </p>
+                <button 
+                  onClick={() => {
+                    setIsFormCompleted(false)
+                    setCurrentStep(1)
+                    setSelectedBudget('')
+                    setSelectedEmployees('')
+                    setSelectedTimeframe('')
+                    setFormData({name: '', email: '', phone: '', privacy: false})
+                  }}
+                  className="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50"
+                >
+                  Neue Anfrage starten
+                </button>
               </div>
             )}
           </div>
