@@ -19,6 +19,9 @@ function App() {
     email: '',
     phone: ''
   })
+  const [showImpressum, setShowImpressum] = useState(false)
+  const [showDatenschutz, setShowDatenschutz] = useState(false)
+
 
   // E-Mail Validierung
   const validateEmail = (email) => {
@@ -88,6 +91,7 @@ function App() {
             <button onClick={() => scrollToSection('solution')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Lösung</button>
             <button onClick={() => scrollToSection('success')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Erfolg</button>
             <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Preise</button>
+            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Kontakt</button>
             <button onClick={() => scrollToSection('calculator')} className="text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity flex items-center space-x-2" style={{ backgroundColor: '#1f1f1e', fontFamily: 'Gomme Sans Regular, sans-serif' }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2"/>
@@ -922,40 +926,46 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 px-6 mt-auto">
+      <footer className="bg-[#F8F8F8] text-gray-800 py-12 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>
-              <span style={{ color: 'white' }}>PISTA</span>
+              <span style={{ color: '#1f1f1e' }}>PISTA</span>
               <span style={{ color: '#E4002B' }}>.</span>
-              <span className="text-base font-normal ml-2" style={{ color: 'white', fontFamily: 'Gomme Sans Regular, sans-serif', letterSpacing: '0.1em' }}>consulting</span>
+              <span className="text-base font-normal ml-2" style={{ color: '#1f1f1e', fontFamily: 'Gomme Sans Regular, sans-serif', letterSpacing: '0.1em' }}>consulting</span>
             </div>
-            <p className="text-gray-400" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Auf der Überholspur zur digitalen Transformation.</p>
+            <p className="text-gray-700" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Auf der Überholspur zur digitalen Transformation.</p>
           </div>
           <div>
             <h4 className="font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Navigation</h4>
-            <ul className="space-y-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-              <li><button onClick={() => scrollToSection('problem')} className="hover:text-gray-300">Problem</button></li>
-              <li><button onClick={() => scrollToSection('solution')} className="hover:text-gray-300">Lösung</button></li>
-              <li><button onClick={() => scrollToSection('success')} className="hover:text-gray-300">Erfolg</button></li>
-              <li><button onClick={() => scrollToSection('pricing')} className="hover:text-gray-300">Preise</button></li>
-              <li><button onClick={() => scrollToSection('calculator')} className="hover:text-gray-300">ROI Rechner</button></li>
-            </ul>
+            <div className="grid grid-cols-2 gap-4">
+              <ul className="space-y-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                <li><button onClick={() => scrollToSection('problem')} className="text-gray-700 hover:text-gray-900">Problem</button></li>
+                <li><button onClick={() => scrollToSection('solution')} className="text-gray-700 hover:text-gray-900">Lösung</button></li>
+                <li><button onClick={() => scrollToSection('success')} className="text-gray-700 hover:text-gray-900">Erfolg</button></li>
+              </ul>
+              <ul className="space-y-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                <li><button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-gray-900">Preise</button></li>
+                <li><button onClick={() => scrollToSection('calculator')} className="text-gray-700 hover:text-gray-900">ROI Rechner</button></li>
+                <li><button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-gray-900">Kontakt</button></li>
+              </ul>
+            </div>
           </div>
           <div>
             <h4 className="font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Rechtliches</h4>
             <ul className="space-y-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-              <li><a href="#" className="hover:text-gray-300">Impressum</a></li>
-              <li><a href="#" className="hover:text-gray-300">Datenschutz</a></li>
+                  <li><button onClick={() => setShowImpressum(true)} className="text-gray-700 hover:text-gray-900">Impressum</button></li>
+                  <li><button onClick={() => setShowDatenschutz(true)} className="text-gray-700 hover:text-gray-900">Datenschutz</button></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Kontakt</h4>
-            <ul className="space-y-2 text-gray-400" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-              <li>PISTA consulting GmbH</li>
-              <li>Musterstraße 1, 12345 Musterstadt</li>
-              <li><a href="mailto:kontakt@pista.consulting" className="hover:text-gray-300">kontakt@pista.consulting</a></li>
-              <li><a href="tel:+49123456789" className="hover:text-gray-300">+49 123 456 789</a></li>
+            <ul className="space-y-2 text-gray-700" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+              <li>Pista Consulting GmbH</li>
+              <li>Herterichstraße 174</li>
+              <li>81476 München</li>
+              <li><a href="mailto:info@pista.consulting" className="text-gray-700 hover:text-gray-900">info@pista.consulting</a></li>
+
             </ul>
           </div>
         </div>
@@ -963,6 +973,232 @@ function App() {
           © {new Date().getFullYear()} PISTA consulting. Alle Rechte vorbehalten.
         </div>
       </footer>
+
+      {/* Impressum Modal */}
+      {showImpressum && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-y-auto p-8 relative">
+            <button 
+              onClick={() => setShowImpressum(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold"
+            >
+              ×
+            </button>
+            
+            <div className="pr-8">
+              <h1 className="text-3xl font-bold mb-8" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                Impressum
+              </h1>
+              
+              <div className="space-y-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Angaben gemäß § 5 DDG:
+                  </h2>
+                  <p className="text-gray-700">
+                    Pista Consulting GmbH<br/>
+                    Herterichstraße 174<br/>
+                    81476 München
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Vertreten durch:
+                  </h2>
+                  <p className="text-gray-700">
+                    Fabian Leibinger
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Kontakt:
+                  </h2>
+                  <p className="text-gray-700">
+                    E-Mail: <a href="mailto:info@pista.consulting" className="text-blue-600 hover:underline">info@pista.consulting</a><br/>
+
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Handelsregister:
+                  </h2>
+                  <p className="text-gray-700">
+                    HRB 289101 (Amtsgericht München)
+
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Umsatzsteuer:
+                  </h2>
+                  <p className="text-gray-700">
+                    Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:<br/>
+                    DE 367 614 650
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Streitschlichtung
+                  </h2>
+                  <p className="text-gray-700">
+                    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Haftung für Inhalte
+                  </h2>
+                  <p className="text-gray-700">
+                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                  </p>
+                  <p className="text-gray-700 mt-3">
+                    Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Haftung für Links
+                  </h2>
+                  <p className="text-gray-700">
+                    Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+                  </p>
+                  <p className="text-gray-700 mt-3">
+                    Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Urheberrecht
+                  </h2>
+                  <p className="text-gray-700">
+                    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+                  </p>
+                  <p className="text-gray-700 mt-3">
+                    Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showDatenschutz && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-y-auto p-8 relative">
+            <button 
+              onClick={() => setShowDatenschutz(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold"
+            >
+              ×
+            </button>
+            
+            <div className="pr-8">
+              <h1 className="text-3xl font-bold mb-8" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                Datenschutzerklärung
+              </h1>
+              
+              <div className="space-y-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Datenschutzerklärung
+                  </h2>
+                  <p className="text-gray-700">
+                    Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+                  </p>
+                  <p className="text-gray-700 mt-3">
+                    Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.
+                  </p>
+                  <p className="text-gray-700 mt-3">
+                    Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Cookies
+                  </h2>
+                  <p className="text-gray-700">
+                    Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert.
+                  </p>
+                  <p className="text-gray-700 mt-3">
+                    Die meisten der von uns verwendeten Cookies sind so genannte „Session-Cookies“. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.
+                  </p>
+                  <p className="text-gray-700 mt-3">
+                    Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Server-Log-Dateien
+                  </h2>
+                  <p className="text-gray-700">
+                    Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 ml-4 mt-2">
+                    <li>Browsertyp und Browserversion</li>
+                    <li>verwendetes Betriebssystem</li>
+                    <li>Referrer URL</li>
+                    <li>Hostname des zugreifenden Rechners</li>
+                    <li>Uhrzeit der Serveranfrage</li>
+                  </ul>
+                  <p className="text-gray-700 mt-3">
+                    Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Wir behalten uns vor, diese Daten nachträglich zu prüfen, wenn uns konkrete Anhaltspunkte für eine rechtswidrige Nutzung bekannt werden.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Kontaktformular
+                  </h2>
+                  <p className="text-gray-700">
+                    Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Datenweitergabe bei Vertragsschluss für Dienstleistungen und digitale Inhalte
+                  </h2>
+                  <p className="text-gray-700">
+                    Wir übermitteln personenbezogene Daten an Dritte nur dann, wenn dies im Rahmen der Vertragsabwicklung notwendig ist, etwa an das mit der Zahlungsabwicklung beauftragte Kreditinstitut. Eine weitergehende Übermittlung der Daten erfolgt nicht bzw. nur dann, wenn Sie der Übermittlung ausdrücklich zugestimmt haben. Eine Weitergabe Ihrer Daten an Dritte ohne ausdrückliche Einwilligung, etwa zu Zwecken der Werbung, erfolgt nicht.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    SSL-Verschlüsselung
+                  </h2>
+                  <p className="text-gray-700">
+                    Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel der Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+                  </p>
+                  <p className="text-gray-700 mt-3">
+                    Wenn die SSL Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    Recht auf Auskunft, Löschung, Sperrung
+                  </h2>
+                  <p className="text-gray-700">
+                    Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
