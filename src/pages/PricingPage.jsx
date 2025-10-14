@@ -8,7 +8,7 @@ export function PricingPage() {
   const implementationPackages = [
     {
       name: "PISTA Starter",
-      price: "12.999",
+      price: "13.000",
       description: "Für Unternehmen bis 25 Mitarbeiter",
       subtitle: "Ersetzt 3-5 separate Software-Lizenzen",
       icon: Users,
@@ -25,7 +25,7 @@ export function PricingPage() {
     },
     {
       name: "PISTA Professional",
-      price: "24.999",
+      price: "25.000",
       description: "Für wachsende Unternehmen 25-100 Mitarbeiter",
       subtitle: "Weniger als 2 Jahre typische ERP-Lizenzkosten",
       icon: Building,
@@ -43,7 +43,7 @@ export function PricingPage() {
     },
     {
       name: "PISTA Enterprise",
-      price: "49.999",
+      price: "50.000",
       description: "Für Unternehmen ab 100 Mitarbeitern",
       subtitle: "Bruchteil der Kosten einer SAP-Implementierung",
       icon: Building2,
@@ -64,7 +64,7 @@ export function PricingPage() {
   const carePackages = [
     {
       name: "PISTA Care Starter",
-      price: "500",
+      price: "1.100",
       description: "Grundbetreuung für kleine Teams (1-25 Mitarbeiter)",
       features: [
         "Monatliche System-Updates & Wartung",
@@ -78,7 +78,7 @@ export function PricingPage() {
     },
     {
       name: "PISTA Care Professional",
-      price: "1.500",
+      price: "2.100",
       description: "Vollbetreuung für wachsende Unternehmen (25-100 Mitarbeiter)",
       features: [
         "Alles aus Starter-Paket",
@@ -94,7 +94,7 @@ export function PricingPage() {
     },
     {
       name: "PISTA Care Enterprise",
-      price: "2.500",
+      price: "4.200",
       description: "Vollbetreuung für komplexe Systeme (100+ Mitarbeiter)",
       features: [
         "Alles aus Professional-Paket",

@@ -124,7 +124,7 @@ export function SuccessStorySection() {
             <div className="text-gray-600">Erfolgreiche Projekte</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-red-600 mb-2">4.9/5</div>
+            <div className="text-4xl font-bold text-red-600 mb-2">5.0/5</div>
             <div className="text-gray-600">Kundenbewertung</div>
           </div>
           <div className="text-center">

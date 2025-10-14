@@ -5,7 +5,7 @@ import CookieBanner from './components/CookieBanner';
 
 function App() {
   const [employees, setEmployees] = useState(50)
-  const [hourlyWage, setHourlyWage] = useState(35)
+  const [hourlyWage, setHourlyWage] = useState(40)
   const [currentStep, setCurrentStep] = useState(1)
   const [selectedBudget, setSelectedBudget] = useState('')
   const [selectedEmployees, setSelectedEmployees] = useState('')
@@ -355,14 +355,15 @@ function App() {
             {/* PISTA Starter */}
             <div className="bg-white p-8 rounded-lg shadow-sm border-t-4 border-gray-200 hover:border-red-500 transition-colors duration-300 flex flex-col">
               <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>🏁 PISTA Starter</h3>
-              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€12.999</p>
+              <p className="text-sm text-gray-600 mb-1">ab</p>
+              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€5.000</p>
               <p className="text-gray-500 mb-6">einmalig</p>
-              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für Unternehmen bis 25 Mitarbeiter</p>
+              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für kleine Unternehmen bis 10 Mitarbeiter</p>
               <ul className="space-y-4 text-gray-600 mb-8 flex-grow" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Umfassende Strategieberatung</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Vollständige ERP-Implementierung</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Datenintegration</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Prozessautomatisierung</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Odoo Community Edition Setup</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Basis-Module: CRM, Vertrieb, Einkauf</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Datenimport & Schulung</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>1 Monat Support</li>
               </ul>
               <button className="w-full mt-auto px-6 py-3 rounded-lg font-semibold text-lg transition-colors duration-300 bg-gray-100 text-gray-800 hover:bg-gray-200" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Mehr erfahren</button>
             </div>
@@ -371,14 +372,15 @@ function App() {
             <div className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-red-500 relative flex flex-col">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>🏆 POLE POSITION</div>
               <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>🏆 PISTA Professional</h3>
-              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€24.999</p>
+              <p className="text-sm text-gray-600 mb-1">ab</p>
+              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€15.000</p>
               <p className="text-gray-500 mb-6">einmalig</p>
-              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für wachsende Unternehmen 25-100 Mitarbeiter</p>
+              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für wachsende Unternehmen 10-50 Mitarbeiter</p>
               <ul className="space-y-4 text-gray-600 mb-8 flex-grow" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Alles aus Starter-Paket</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Erweiterte Strategieberatung</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Multi-Standort-Setup</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>API-Integrationen</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Odoo Enterprise Edition</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Lager, Produktion, Buchhaltung</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>API-Integration & Workflows</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>3 Monate Premium-Support</li>
               </ul>
               <button className="w-full mt-auto px-6 py-3 rounded-lg font-semibold text-lg transition-colors duration-300 bg-red-500 text-white hover:bg-red-600" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Jetzt starten</button>
             </div>
@@ -386,14 +388,15 @@ function App() {
             {/* PISTA Enterprise */}
             <div className="bg-white p-8 rounded-lg shadow-sm border-t-4 border-gray-200 hover:border-red-500 transition-colors duration-300 flex flex-col">
               <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>🏎️ PISTA Enterprise</h3>
-              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€49.999</p>
+              <p className="text-sm text-gray-600 mb-1">ab</p>
+              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€50.000</p>
               <p className="text-gray-500 mb-6">einmalig</p>
-              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für Unternehmen ab 100 Mitarbeitern</p>
+              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für Unternehmen ab 50 Mitarbeitern</p>
               <ul className="space-y-4 text-gray-600 mb-8 flex-grow" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Alles aus Professional-Paket</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>C-Level Strategieberatung</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Vollständige Systemlandschaft-Integration</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Dedicated Project Manager</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Odoo Enterprise + Custom Development</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Alle Module inkl. Studio & IoT</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Multi-Standort & Multi-Company</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>6 Monate Premium-Support</li>
               </ul>
               <button className="w-full mt-auto px-6 py-3 rounded-lg font-semibold text-lg transition-colors duration-300 bg-gray-100 text-gray-800 hover:bg-gray-200" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Mehr erfahren</button>
             </div>
@@ -406,25 +409,25 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-              Monatliche Betreuung: Kontinuierlich auf der Überholspur
+              Support & Wartung
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-              Flexible monatliche Pakete für nachhaltige digitale Transformation
+              Kontinuierliche Betreuung für einen reibungslosen Betrieb Ihres Odoo-Systems
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* PISTA Start */}
             <div className="bg-white p-8 rounded-lg shadow-sm border-t-4 border-gray-200 hover:border-red-500 transition-colors duration-300 flex flex-col">
-              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>🏁 PISTA Start</h3>
-              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€1.000</p>
+              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>Support Basic</h3>
+              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€500</p>
               <p className="text-gray-500 mb-6">pro Monat</p>
-              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für Unternehmen bis 25 Mitarbeiter</p>
+              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für kleine Teams bis 10 Mitarbeiter</p>
               <ul className="space-y-4 text-gray-600 mb-8 flex-grow" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Umfassende Strategieberatung</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Vollständige ERP-Implementierung</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Datenintegration</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Prozessautomatisierung</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>System-Updates & Sicherheitspatches</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>E-Mail-Support (binnen 48h)</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Monatliches Backup & Monitoring</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Bis zu 2 Stunden Support/Monat</li>
               </ul>
               <button className="w-full mt-auto px-6 py-3 rounded-lg font-semibold text-lg transition-colors duration-300 bg-gray-100 text-gray-800 hover:bg-gray-200" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Mehr erfahren</button>
             </div>
@@ -432,30 +435,30 @@ function App() {
             {/* PISTA Professional */}
             <div className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-red-500 relative flex flex-col">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>🏆 POLE POSITION</div>
-              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>🏆 PISTA Professional</h3>
-              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€2.500</p>
+              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>Support Professional</h3>
+              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€1.500</p>
               <p className="text-gray-500 mb-6">pro Monat</p>
-              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für wachsende Unternehmen 25-100 Mitarbeiter</p>
+              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für wachsende Teams 10-50 Mitarbeiter</p>
               <ul className="space-y-4 text-gray-600 mb-8 flex-grow" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Alles aus Starter-Paket</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Erweiterte Strategieberatung</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Multi-Standort-Setup</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>API-Integrationen</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Alles aus Basic-Paket</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Prioritäts-Support (binnen 8h)</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Proaktives Monitoring 24/7</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Bis zu 8 Stunden Support/Monat</li>
               </ul>
               <button className="w-full mt-auto px-6 py-3 rounded-lg font-semibold text-lg transition-colors duration-300 bg-red-500 text-white hover:bg-red-600" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Jetzt starten</button>
             </div>
 
             {/* PISTA Enterprise */}
             <div className="bg-white p-8 rounded-lg shadow-sm border-t-4 border-gray-200 hover:border-red-500 transition-colors duration-300 flex flex-col">
-              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>🏎️ PISTA Enterprise</h3>
-              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€5.000</p>
+              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>Support Enterprise</h3>
+              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€3.500</p>
               <p className="text-gray-500 mb-6">pro Monat</p>
-              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für Unternehmen ab 100 Mitarbeitern</p>
+              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für große Teams ab 50 Mitarbeitern</p>
               <ul className="space-y-4 text-gray-600 mb-8 flex-grow" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
                 <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Alles aus Professional-Paket</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>C-Level Strategieberatung</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Vollständige Systemlandschaft-Integration</li>
-                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Dedicated Project Manager</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>24/7 Premium-Support (binnen 2h)</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Dedizierter Account Manager</li>
+                <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Bis zu 20 Stunden Support/Monat</li>
               </ul>
               <button className="w-full mt-auto px-6 py-3 rounded-lg font-semibold text-lg transition-colors duration-300 bg-gray-100 text-gray-800 hover:bg-gray-200" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Mehr erfahren</button>
             </div>
@@ -522,232 +525,6 @@ function App() {
 
       <ContactSection setShowDatenschutz={setShowDatenschutz} />
 
-      <section id="contact" className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-              Startschuss für Ihre Überholspur
-            </h2>
-            <p className="text-xl text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-              Kostenlose Erstberatung in 4 einfachen Schritten. Wir melden uns innerhalb von 24 Stunden bei Ihnen.
-            </p>
-          </div>
-
-          <div className="bg-gray-50 p-8 rounded-lg shadow-sm max-w-2xl mx-auto">
-            {isFormCompleted ? (
-              <div className="text-center py-16">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8">
-                  <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <h3 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                  Vielen Dank für Ihre Anfrage!
-                </h3>
-                <p className="text-xl text-gray-600 mb-8" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                  Wir werden uns schnellstmöglich mit Ihnen in Verbindung setzen.
-                </p>
-                <div className="border-t border-gray-200 pt-8">
-                  <button 
-                    onClick={() => { setIsFormCompleted(false); setCurrentStep(1); }}
-                    className="px-8 py-4 text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
-                    style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}
-                  >
-                    Neue Anfrage starten
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div className="space-y-6">
-                {currentStep === 1 && (
-                  <div>
-                    <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                      1. Ihr Budget
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <button 
-                        onClick={() => { setSelectedBudget('10.000 - 25.000 €'); setCurrentStep(2) }}
-                        className={`px-6 py-3 border-2 rounded-lg font-semibold ${selectedBudget === '10.000 - 25.000 €' ? 'bg-red-500 text-white border-red-500' : 'border-gray-300 text-gray-700 hover:bg-gray-100'} transition-colors duration-300`}
-                        style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}
-                      >
-                        10.000 - 25.000 €
-                      </button>
-                      <button 
-                        onClick={() => { setSelectedBudget('25.000 - 50.000 €'); setCurrentStep(2) }}
-                        className={`px-6 py-3 border-2 rounded-lg font-semibold ${selectedBudget === '25.000 - 50.000 €' ? 'bg-red-500 text-white border-red-500' : 'border-gray-300 text-gray-700 hover:bg-gray-100'} transition-colors duration-300`}
-                        style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}
-                      >
-                        25.000 - 50.000 €
-                      </button>
-                      <button 
-                        onClick={() => { setSelectedBudget('50.000 € +'); setCurrentStep(2) }}
-                        className={`px-6 py-3 border-2 rounded-lg font-semibold ${selectedBudget === '50.000 € +' ? 'bg-red-500 text-white border-red-500' : 'border-gray-300 text-gray-700 hover:bg-gray-100'} transition-colors duration-300`}
-                        style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}
-                      >
-                        50.000 € +
-                      </button>
-                    </div>
-                  </div>
-                )}
-
-                {currentStep === 2 && (
-                  <div>
-                    <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                      2. Anzahl der Mitarbeiter
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <button 
-                        onClick={() => { setSelectedEmployees('1-25'); setCurrentStep(3) }}
-                        className={`px-6 py-3 border-2 rounded-lg font-semibold ${selectedEmployees === '1-25' ? 'bg-red-500 text-white border-red-500' : 'border-gray-300 text-gray-700 hover:bg-gray-100'} transition-colors duration-300`}
-                        style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}
-                      >
-                        1-25
-                      </button>
-                      <button 
-                        onClick={() => { setSelectedEmployees('25-100'); setCurrentStep(3) }}
-                        className={`px-6 py-3 border-2 rounded-lg font-semibold ${selectedEmployees === '25-100' ? 'bg-red-500 text-white border-red-500' : 'border-gray-300 text-gray-700 hover:bg-gray-100'} transition-colors duration-300`}
-                        style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}
-                      >
-                        25-100
-                      </button>
-                      <button 
-                        onClick={() => { setSelectedEmployees('100+'); setCurrentStep(3) }}
-                        className={`px-6 py-3 border-2 rounded-lg font-semibold ${selectedEmployees === '100+' ? 'bg-red-500 text-white border-red-500' : 'border-gray-300 text-gray-700 hover:bg-gray-100'} transition-colors duration-300`}
-                        style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}
-                      >
-                        100+
-                      </button>
-                    </div>
-                    <button 
-                      onClick={() => setCurrentStep(1)}
-                      className="mt-4 text-gray-500 hover:text-gray-700"
-                      style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}
-                    >
-                      Zurück
-                    </button>
-                  </div>
-                )}
-
-                {currentStep === 3 && (
-                  <div>
-                    <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                      3. Zeitrahmen
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <button 
-                        onClick={() => { setSelectedTimeframe('1-3 Monate'); setCurrentStep(4) }}
-                        className={`px-6 py-3 border-2 rounded-lg font-semibold ${selectedTimeframe === '1-3 Monate' ? 'bg-red-500 text-white border-red-500' : 'border-gray-300 text-gray-700 hover:bg-gray-100'} transition-colors duration-300`}
-                        style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}
-                      >
-                        1-3 Monate
-                      </button>
-                      <button 
-                        onClick={() => { setSelectedTimeframe('3-6 Monate'); setCurrentStep(4) }}
-                        className={`px-6 py-3 border-2 rounded-lg font-semibold ${selectedTimeframe === '3-6 Monate' ? 'bg-red-500 text-white border-red-500' : 'border-gray-300 text-gray-700 hover:bg-gray-100'} transition-colors duration-300`}
-                        style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}
-                      >
-                        3-6 Monate
-                      </button>
-                      <button 
-                        onClick={() => { setSelectedTimeframe('6+ Monate'); setCurrentStep(4) }}
-                        className={`px-6 py-3 border-2 rounded-lg font-semibold ${selectedTimeframe === '6+ Monate' ? 'bg-red-500 text-white border-red-500' : 'border-gray-300 text-gray-700 hover:bg-gray-100'} transition-colors duration-300`}
-                        style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}
-                      >
-                        6+ Monate
-                      </button>
-                    </div>
-                    <button 
-                      onClick={() => setCurrentStep(2)}
-                      className="mt-4 text-gray-500 hover:text-gray-700"
-                      style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}
-                    >
-                      Zurück
-                    </button>
-                  </div>
-                )}
-
-                {currentStep === 4 && (
-                  <div>
-                    <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                      4. Ihre Kontaktdaten
-                    </h3>
-                    <div className="space-y-4">
-                      <div>
-                        <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                          Name
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                          value={formData.name}
-                          onChange={(e) => handleFormDataChange('name', e.target.value)}
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                          E-Mail
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${validationErrors.email ? 'border-red-500' : ''}`}
-                          value={formData.email}
-                          onChange={(e) => handleFormDataChange('email', e.target.value)}
-                        />
-                        {validationErrors.email && <p className="text-red-500 text-xs italic mt-1">{validationErrors.email}</p>}
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className="block text-gray-700 text-sm font-bold mb-2" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                          Telefonnummer
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${validationErrors.phone ? 'border-red-500' : ''}`}
-                          value={formData.phone}
-                          onChange={(e) => handleFormDataChange('phone', e.target.value)}
-                        />
-                        {validationErrors.phone && <p className="text-red-500 text-xs italic mt-1">{validationErrors.phone}</p>}
-                      </div>
-                      <div className="flex items-center">
-                        <input
-                          type="checkbox"
-                          id="privacy"
-                          className="mr-2 leading-tight"
-                          checked={formData.privacy}
-                          onChange={(e) => handleFormDataChange('privacy', e.target.checked)}
-                        />
-                        <label htmlFor="privacy" className="text-sm text-gray-700" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                          Ich stimme der <button onClick={() => setShowDatenschutz(true)} className="text-blue-600 hover:underline">Datenschutzerklärung</button> zu.
-                        </label>
-                      </div>
-                    </div>
-                    <div className="mt-6 flex justify-between items-center">
-                      <button 
-                        onClick={() => setCurrentStep(3)}
-                        className="text-gray-500 hover:text-gray-700"
-                        style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}
-                      >
-                        Zurück
-                      </button>
-                      <button 
-                        onClick={() => setIsFormCompleted(true)}
-                        className="px-8 py-4 text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
-                        style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}
-                        disabled={!formData.name || !formData.email || !formData.phone || !formData.privacy || validationErrors.email || validationErrors.phone}
-                      >
-                        Anfrage senden
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-10 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -790,7 +567,7 @@ function App() {
 
                 <div>
                   <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                    Vertreten durch:
+                    Geschäftsführer:
                   </h2>
                   <p className="text-gray-700">
                     Lazaros Doris

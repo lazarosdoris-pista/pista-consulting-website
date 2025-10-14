@@ -8,7 +8,7 @@ import { Calculator, TrendingUp, DollarSign, Clock } from 'lucide-react'
 
 export function ROICalculator() {
   const [employees, setEmployees] = useState([50])
-  const [hourlyWage, setHourlyWage] = useState([35])
+  const [hourlyWage, setHourlyWage] = useState([40])
 
   // Berechnungslogik basierend auf der ursprünglichen Website
   const savedHoursPerWeek = Math.round(employees[0] * 1.5) // 1.5 Stunden pro Mitarbeiter pro Woche

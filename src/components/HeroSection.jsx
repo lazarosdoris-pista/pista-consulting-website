@@ -62,7 +62,7 @@ export function HeroSection() {
             <div className="bg-white rounded-2xl shadow-2xl p-8">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-600 mb-2">4.9/5</div>
+                  <div className="text-3xl font-bold text-red-600 mb-2">5.0/5</div>
                   <div className="text-sm text-gray-600">Kundenbewertung</div>
                   <div className="flex justify-center mt-1">
                     {[...Array(5)].map((_, i) => (
