@@ -3,8 +3,11 @@ import { useState } from 'react'
 import { ContactSection } from './components/ContactSection'
 import CookieBanner from './components/CookieBanner';
 import PistiChatbot from './components/PistiChatbot';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Blog from './components/Blog'; // Import the new Blog component
+import BlogPost from './components/BlogPost'; // Import the new BlogPost component
 
-function App() {
+function MainContent() {
   const [employees, setEmployees] = useState(50)
   const [hourlyWage, setHourlyWage] = useState(40)
   const [currentStep, setCurrentStep] = useState(1)
@@ -24,11 +27,11 @@ function App() {
   })
   const [showImpressum, setShowImpressum] = useState(false)
   const [showDatenschutz, setShowDatenschutz] = useState(false)
-  const [billingPeriod, setBillingPeriod] = useState('einmalig')
+  const [billingPeriod, setBillingPeriod] = useState('einmalig') // State for billing period
 
   // E-Mail Validierung
   const validateEmail = (email) => {
-    const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
     return emailRegex.test(email)
   }
 
@@ -40,7 +43,7 @@ function App() {
 
   // Telefonnummer Input Handler (filtert ungültige Zeichen)
   const handlePhoneInput = (value) => {
-    const filteredValue = value.replace(/[^+0-9\s\-\(\)]/g, '')
+    const filteredValue = value.replace(/[^\+0-9\s\-\(\)]/g, '')
     return filteredValue
   }
 
@@ -75,11 +78,12 @@ function App() {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  // Define packages directly in App.jsx
   const packages = [
     {
       name: "PISTA Starter",
       price: "15.000",
-      monthlyPrice: "1.500",
+      monthlyPrice: "1.500", // 15.000 / 10
       description: "Für kleine Unternehmen bis 10 Mitarbeiter",
       features: [
         "Odoo Community Edition Setup",
@@ -91,7 +95,7 @@ function App() {
     {
       name: "PISTA Professional",
       price: "25.000",
-      monthlyPrice: "2.500",
+      monthlyPrice: "2.500", // 25.000 / 10
       description: "Für wachsende Unternehmen 10-50 Mitarbeiter",
       features: [
         "Odoo Enterprise Edition",
@@ -104,7 +108,7 @@ function App() {
     {
       name: "PISTA Enterprise",
       price: "50.000",
-      monthlyPrice: "5.000",
+      monthlyPrice: "5.000", // 50.000 / 10
       description: "Für Unternehmen ab 50 Mitarbeitern",
       features: [
         "Odoo Enterprise + Custom Development",
@@ -306,7 +310,7 @@ function App() {
       <section id="success" className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif	', color: '#1f1f1e' }}>
+            <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
               Erfolgsgeschichte: Bavaria Heizungstechnik
             </h2>
             <p className="text-xl text-gray-600 mb-8" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
@@ -316,7 +320,7 @@ function App() {
               <h3 className="text-2xl font-bold mb-4 flex items-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
                 <span className="text-3xl mr-3">🏁</span> Die Herausforderung
               </h3>
-              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+              <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
                 Bavaria Heizungstechnik, ein Familienunternehmen mit 45 Mitarbeitern, kämpfte mit veralteten Systemen. Angebote wurden noch in Excel erstellt, die Lagerverwaltung lief über Zettelwirtschaft und Kundendaten waren über verschiedene Systeme verstreut.
               </p>
               <div className="relative">
@@ -563,6 +567,18 @@ function App() {
       <PistiChatbot />
     </div>
   )
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainContent />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App
