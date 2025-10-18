@@ -2,6 +2,7 @@ import './App.css'
 import { useState } from 'react'
 import { ContactSection } from './components/ContactSection'
 import CookieBanner from './components/CookieBanner';
+import PistiChatbot from './components/PistiChatbot';
 
 function App() {
   const [employees, setEmployees] = useState(50)
@@ -763,6 +764,7 @@ function App() {
         </div>
       )}
       <CookieBanner />
+      <PistiChatbot />
     </div>
   )
 }
