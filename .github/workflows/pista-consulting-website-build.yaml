@@ -37,8 +37,9 @@ jobs:
           CI: true
           SITE_URL: ${{ inputs.site-url }}
         run: |
-          npm install --legacy-peer-deps
-          npm run build
+          npm install --global pnpm
+          pnpm install
+          pnpm build
 
 # Please do not touch the following action
       - name: Store deployment content
@@ -46,7 +47,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: 61b00d5e-9306-41ad-bdb0-d1da8a69085d
+          project-id: b317e756-4dd8-4b72-85a7-303a35c1c718
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
