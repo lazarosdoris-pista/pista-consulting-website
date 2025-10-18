@@ -357,7 +357,7 @@ function App() {
             <div className="bg-white p-8 rounded-lg shadow-sm border-t-4 border-gray-200 hover:border-red-500 transition-colors duration-300 flex flex-col">
               <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>🏁 PISTA Starter</h3>
               <p className="text-sm text-gray-600 mb-1">ab</p>
-              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€5.000</p>
+              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€15.000</p>
               <p className="text-gray-500 mb-6">einmalig</p>
               <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für kleine Unternehmen bis 10 Mitarbeiter</p>
               <ul className="space-y-4 text-gray-600 mb-8 flex-grow" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
@@ -374,7 +374,7 @@ function App() {
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>🏆 POLE POSITION</div>
               <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>🏆 PISTA Professional</h3>
               <p className="text-sm text-gray-600 mb-1">ab</p>
-              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€15.000</p>
+              <p className="text-5xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>€25.000</p>
               <p className="text-gray-500 mb-6">einmalig</p>
               <p className="text-gray-600 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Für wachsende Unternehmen 10-50 Mitarbeiter</p>
               <ul className="space-y-4 text-gray-600 mb-8 flex-grow" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
