@@ -2,8 +2,11 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ArrowRight, Check, Star, Users, Building, Building2 } from 'lucide-react'
+import { useState } from 'react'
 
 export function PricingSection() {
+  const [billingPeriod, setBillingPeriod] = useState('einmalig')
+
   const scrollToSection = (href) => {
     const element = document.querySelector(href)
     if (element) {
@@ -14,7 +17,8 @@ export function PricingSection() {
   const packages = [
     {
       name: "PISTA Starter",
-      price: "5.000",
+      price: "15.000",
+      monthlyPrice: "1.500",
       description: "Für kleine Unternehmen bis 10 Mitarbeiter",
       subtitle: "Odoo Community Edition - Ideal für den Einstieg",
       icon: Users,
@@ -30,7 +34,8 @@ export function PricingSection() {
     },
     {
       name: "PISTA Professional",
-      price: "15.000",
+      price: "25.000",
+      monthlyPrice: "2.500",
       description: "Für wachsende Unternehmen 10-50 Mitarbeiter",
       subtitle: "Odoo Enterprise - Vollständige Integration",
       icon: Building,
@@ -48,6 +53,7 @@ export function PricingSection() {
     {
       name: "PISTA Enterprise",
       price: "50.000",
+      monthlyPrice: "5.000",
       description: "Für Unternehmen ab 50 Mitarbeitern",
       subtitle: "Odoo Enterprise - Maßgeschneiderte Lösung",
       icon: Building2,
@@ -83,14 +89,46 @@ export function PricingSection() {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Investition in Ihre digitale Zukunft
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Einmalige Investition für lebenslange Vorteile. Transparente Preise ohne versteckte Kosten.
           </p>
+
+          {/* Billing Period Toggle */}
+          <div className="flex justify-center items-center space-x-4 mt-8">
+            <button
+              onClick={() => setBillingPeriod('einmalig')}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+                billingPeriod === 'einmalig'
+                  ? 'bg-gray-900 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              Einmalig
+            </button>
+            <button
+              onClick={() => setBillingPeriod('monatlich')}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+                billingPeriod === 'monatlich'
+                  ? 'bg-gray-900 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              Monatlich
+            </button>
+          </div>
+          {billingPeriod === 'monatlich' && (
+            <p className="text-sm text-gray-500 mt-4">
+              * Monatliche Zahlung über 12 Monate
+            </p>
+          )}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {packages.map((pkg, index) => {
             const Icon = pkg.icon
+            const displayPrice = billingPeriod === 'einmalig' ? pkg.price : pkg.monthlyPrice
+            const priceLabel = billingPeriod === 'einmalig' ? 'einmalig' : '/Monat'
+            
             return (
               <Card key={index} className={`relative transition-all duration-300 hover:shadow-xl ${pkg.popular ? 'border-red-500 bg-red-50 shadow-xl scale-105' : 'border-gray-200 hover:border-gray-300'}`}>
                 {pkg.popular && (
@@ -109,8 +147,8 @@ export function PricingSection() {
                   <div className="my-4">
                     <div className="text-sm text-gray-600 mb-1">ab</div>
                     <div className="text-4xl font-bold text-gray-900">
-                      {formatPrice(pkg.price)}
-                      <span className="text-lg font-normal text-gray-600"> einmalig</span>
+                      {formatPrice(displayPrice)}
+                      <span className="text-lg font-normal text-gray-600"> {priceLabel}</span>
                     </div>
                   </div>
                   <CardDescription className="text-base">
@@ -327,3 +365,4 @@ export function PricingSection() {
     </section>
   )
 }
+
