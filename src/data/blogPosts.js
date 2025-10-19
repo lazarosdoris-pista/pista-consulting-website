@@ -247,6 +247,62 @@ Diese manuellen Prozesse führten zu:
 
 Wir haben Bavaria Heizungstechnik bei der Implementierung von Odoo unterstützt. Das Projekt umfasste:
 
+<div style="margin: 40px 0; padding: 30px; background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <h3 style="text-align: center; color: #1f1f1e; margin-bottom: 30px; font-size: 24px;">🏁 Die Herausforderung</h3>
+  <p style="text-align: center; color: #666; margin-bottom: 40px;">Bavaria Heizungstechnik, ein Familienunternehmen mit 45 Mitarbeitern, kämpfte mit veralteten Systemen. Angebote wurden noch in Excel erstellt, die Lagerverwaltung lief über Zettelwirtschaft und Kundendaten waren über verschiedene Systeme verstreut.</p>
+  
+  <div style="position: relative; margin: 40px 0;">
+    <div style="height: 8px; background: linear-gradient(to right, #E4002B 0%, #FF6B6B 50%, #FFA500 75%, #FFD700 100%); border-radius: 10px; position: relative; overflow: visible;">
+      <div style="position: absolute; left: 35%; top: -12px; width: 32px; height: 32px; animation: drive 3s ease-in-out infinite;">🏎️</div>
+    </div>
+  </div>
+  
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 60px;">
+    <div style="text-align: center;">
+      <div style="width: 60px; height: 60px; background: #E4002B; border-radius: 50%; display: flex; align-items: center; justify-center; margin: 0 auto 10px; font-size: 24px;">1</div>
+      <div style="font-size: 20px; margin-bottom: 5px;">🏁</div>
+      <div style="font-weight: bold; color: #1f1f1e;">ERP</div>
+      <div style="font-size: 12px; color: #666;">System-Integration</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="width: 60px; height: 60px; background: #E4002B; border-radius: 50%; display: flex; align-items: center; justify-center; margin: 0 auto 10px; font-size: 24px;">2</div>
+      <div style="font-size: 20px; margin-bottom: 5px;">⚙️</div>
+      <div style="font-weight: bold; color: #1f1f1e;">AUTO</div>
+      <div style="font-size: 12px; color: #666;">Prozess-Optimierung</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="width: 60px; height: 60px; background: #E4002B; border-radius: 50%; display: flex; align-items: center; justify-center; margin: 0 auto 10px; font-size: 24px;">3</div>
+      <div style="font-size: 20px; margin-bottom: 5px;">📱</div>
+      <div style="font-weight: bold; color: #1f1f1e;">DIGITAL</div>
+      <div style="font-size: 12px; color: #666;">Mobile Lösungen</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="width: 60px; height: 60px; background: #FFD700; border-radius: 50%; display: flex; align-items: center; justify-center; margin: 0 auto 10px; font-size: 24px;">🏆</div>
+      <div style="font-size: 20px; margin-bottom: 5px;">🎯</div>
+      <div style="font-weight: bold; color: #1f1f1e;">ZIEL</div>
+      <div style="font-size: 12px; color: #666;">Erfolg erreicht</div>
+    </div>
+  </div>
+  
+  <div style="margin-top: 40px; padding: 20px; background: white; border-radius: 10px; text-align: center;">
+    <div style="font-size: 14px; color: #666; margin-bottom: 10px;">Transformations-Reise</div>
+    <div style="height: 6px; background: linear-gradient(to right, #E4002B 0%, #FF6B6B 33%, #FFA500 66%, #FFD700 100%); border-radius: 3px;"></div>
+    <div style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 12px; color: #666;">
+      <span>Start</span>
+      <span>Erfolg</span>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes drive {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(200px) translateY(-5px); }
+  50% { transform: translateX(400px) translateY(0); }
+  75% { transform: translateX(600px) translateY(-5px); }
+}
+</style>
+
 **Phase 1: Analyse und Planung (2 Wochen)**
 - Analyse der aktuellen Prozesse
 - Identifikation von Optimierungspotentialen
