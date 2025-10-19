@@ -118,3 +118,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@keyframes race-car {
+  0% {
+    left: 0%;
+    transform: translateY(-50%);
+  }
+  100% {
+    left: 100%;
+    transform: translateY(-50%);
+  }
+}
+
+.animate-race-car {
+  animation: race-car 5s ease-in-out infinite;
+}
+
