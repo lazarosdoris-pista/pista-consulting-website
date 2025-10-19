@@ -150,7 +150,7 @@ function MainContent() {
       <div className="py-3 text-center text-white" style={{ backgroundColor: '#E4002B' }}>
         <div className="flex items-center justify-center space-x-6">
           <div className="flex items-center space-x-2">
-            <span className="text-xl">🏁</span>
+            <span className="text-xl inline-block animate-bounce">🏁</span>
             <span style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Kostenlose Pole-Position-Beratung - Nur noch wenige Plätze frei!</span>
           </div>
           <div className="flex items-center space-x-4 text-sm">
