@@ -300,7 +300,7 @@ function MainContent() {
       </section>
 
       {/* Success Section */}
-      <section id="success" className="py-20 px-6 bg-gray-50">
+      <section id="success" className="py-20 px-6 bg-gradient-to-br from-gray-100 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
@@ -310,27 +310,27 @@ function MainContent() {
               Sehen Sie, wie junge Unternehmen mit PISTA Consulting von Anfang an durchstarten.
             </p>
           </div>
-          <div className="bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-8">
+          <div className="bg-white p-8 rounded-lg shadow-xl flex flex-col md:flex-row items-center gap-8 transform transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl">
             <div className="md:w-1/2">
               <h3 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                Bavaria Heizungstechnik – Vom Start-up zum Wachstums-Champion
+                <span className="text-red-600">🚀</span> Bavaria Heizungstechnik – Vom Start-up zum Wachstums-Champion
               </h3>
               <p className="text-gray-700 text-lg mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                Wie ein junges SHK-Unternehmen durch Odoo von Anfang an die richtigen Weichen stellte und in Rekordzeit auf 45 Mitarbeiter wuchs. Erfahren Sie, wie digitale Prozesse von Tag 1 an ein explosives Wachstum ermöglichten.
+                Wie ein junges SHK-Unternehmen durch Odoo von Anfang an die richtigen Weichen stellte und in Rekordzeit auf <span className="font-bold text-red-600">15 Mitarbeiter in 1,5 Jahren</span> wuchs. Erfahren Sie, wie digitale Prozesse von Tag 1 an ein explosives Wachstum ermöglichten.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/bavaria-heizungstechnik-case-study.md" target="_blank" className="px-6 py-3 rounded-lg font-semibold text-lg transition-colors duration-300" style={{ backgroundColor: '#FFD700', color: '#1f1f1e', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+                <a href="/bavaria-heizungstechnik-case-study.md" target="_blank" className="px-6 py-3 rounded-lg font-semibold text-lg transition-colors duration-300 bg-yellow-400 text-gray-900 hover:bg-yellow-500" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>
                   Detailliertes Fallbeispiel lesen →
                 </a>
-                <a href="/blog/erfolgsgeschichte-bavaria-heizungstechnik" className="px-6 py-3 border-2 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-colors" style={{ borderColor: '#1f1f1e', color: '#1f1f1e', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+                <a href="/blog/erfolgsgeschichte-bavaria-heizungstechnik" className="px-6 py-3 border-2 rounded-lg font-semibold text-lg transition-colors duration-300 border-gray-900 text-gray-900 hover:bg-gray-100" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>
                   Erfolgsgeschichte lesen →
                 </a>
               </div>
             </div>
-            <div className="md:w-1/2 relative h-64 md:h-80 overflow-hidden rounded-lg shadow-md">
-              <img src="https://via.placeholder.com/600x400" alt="Bavaria Heizungstechnik" className="w-full h-full object-cover"/>
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <p className="text-white text-2xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>45 Mitarbeiter in 3 Jahren</p>
+            <div className="md:w-1/2 relative h-64 md:h-80 overflow-hidden rounded-lg shadow-md group">
+              <img src="https://via.placeholder.com/600x400" alt="Bavaria Heizungstechnik" className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+              <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center transition-all duration-300 group-hover:bg-opacity-70">
+                <p className="text-white text-3xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>15 Mitarbeiter in 1,5 Jahren</p>
               </div>
             </div>
           </div>
