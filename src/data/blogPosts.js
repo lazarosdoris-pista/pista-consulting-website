@@ -223,25 +223,14 @@ Mit den richtigen Praktiken und Odoo als Werkzeug können Sie Ihre Lagerverwaltu
   },
   {
     id: 6,
-    title: "Erfolgsgeschichte: Wie Bavaria Heizungstechnik 40% Effizienzsteigerung erreichte",
+    title: "Erfolgsgeschichte: Bavaria Heizungstechnik – Vom Branchenführer zum Digitalisierungs-Champion",
     slug: "erfolgsgeschichte-bavaria-heizungstechnik",
-    excerpt: "Ein Fallbeispiel: Wie wir einem Familienunternehmen mit Odoo zu 40% mehr Effizienz verholfen haben.",
-    content: `Bavaria Heizungstechnik ist ein Familienunternehmen mit 45 Mitarbeitern, das sich auf die Planung und Installation von Heizungssystemen spezialisiert hat. Wie viele traditionelle Handwerksbetriebe kämpfte das Unternehmen mit veralteten Systemen und ineffizienten Prozessen.
+    excerpt: "Wie ein bereits überdurchschnittlich profitables SHK-Unternehmen durch strategische Digitalisierung seine Marktführerschaft weiter ausbaut.",
+    content: `Bavaria Heizungstechnik ist ein außerordentlich erfolgreiches Familienunternehmen mit 45 Mitarbeitern im SHK-Handwerk. Das Unternehmen übertrifft die Branche in allen relevanten Kennzahlen: Die Umsatzrendite liegt deutlich über dem Branchendurchschnitt, die Personalkosten sind vorbildlich schlank, und die Liquiditätsposition ist exzellent. Trotz dieser beeindruckenden Ausgangslage erkannte die Geschäftsführung weiteres Wachstumspotenzial durch Digitalisierung.
 
-## Die Herausforderung
+## Die Vision: Vom Erfolg zur Exzellenz
 
-Das Unternehmen hatte folgende Probleme:
-- Angebote wurden noch in Excel erstellt
-- Die Lagerverwaltung lief über Zettelwirtschaft
-- Kundendaten waren über verschiedene Systeme verstreut
-- Rechnungen wurden manuell erstellt
-- Keine Echtzeit-Übersicht über Aufträge und Bestände
-
-Diese manuellen Prozesse führten zu:
-- Zeitverschwendung
-- Häufigen Fehlern
-- Schlechter Kundenzufriedenheit
-- Hohen Verwaltungskosten
+Bavaria Heizungstechnik wollte seine Marktführerschaft weiter ausbauen und durch moderne Systeme noch effizienter werden. Das Ziel: Die bereits überdurchschnittliche Performance auf ein neues Level heben.
 
 ## Die Lösung: Odoo-Implementierung
 
@@ -303,43 +292,26 @@ Wir haben Bavaria Heizungstechnik bei der Implementierung von Odoo unterstützt.
 }
 </style>
 
-**Phase 1: Analyse und Planung (2 Wochen)**
-- Analyse der aktuellen Prozesse
-- Identifikation von Optimierungspotentialen
-- Schulungsplan für Mitarbeiter
+**Die Umsetzung in 8 Wochen:**
 
-**Phase 2: Implementierung (4 Wochen)**
-- Konfiguration des Odoo-Systems
-- Datenimport aus bestehenden Systemen
-- Anpassung an spezifische Anforderungen
+Nach einer fundierten Unternehmensanalyse implementierten wir ein maßgeschneidertes Odoo-System, das alle Geschäftsprozesse intelligent vernetzt: Von der Angebotserstellung über die Materialbeschaffung bis zum Forderungsmanagement. Das Ergebnis: Volle Transparenz, optimierte Abläufe und strategische Handlungsfreiheit.
 
-**Phase 3: Schulung und Go-Live (2 Wochen)**
-- Umfassende Schulung aller Mitarbeiter
-- Parallelbetrieb zur Fehleridentifikation
-- Go-Live und Support
+## Die Erfolge: Vom Branchenführer zum Benchmark
 
-## Die Ergebnisse
-
-Nach der Implementierung erreichte Bavaria Heizungstechnik:
-
-- **40% Effizienzsteigerung:** Durch Automatisierung sparten die Mitarbeiter täglich 6-8 Stunden
-- **50% weniger Fehler:** Manuelle Dateneingaben wurden eliminiert
-- **Bessere Kundenzufriedenheit:** Schnellere Angebotserstellung und bessere Kommunikation
-- **Echtzeit-Übersicht:** Management hat jederzeit Zugriff auf aktuelle Daten
-- **Kosteneinsparungen:** Reduzierte Verwaltungskosten und weniger Verschwendung
+Bavaria Heizungstechnik hat seine ohnehin schon beeindruckende Marktposition weiter gefestigt. Die bereits überdurchschnittliche Profitabilität wurde durch optimierte Prozesse noch gesteigert. Die exzellente Liquiditätsposition ermöglicht nun strategische Investitionen in Wachstum und Innovation. Das Unternehmen nutzt die gewonnene Effizienz für die geografische Expansion und den Ausbau seiner Premiumpositionierung im Zukunftsmarkt Energiewende.
 
 ## Kundenzitat
 
-"Die Implementierung von Odoo war die beste Investition, die wir getätigt haben. Unsere Mitarbeiter sind produktiver, unsere Kunden sind zufriedener und unsere Kosten sind gesunken. Ich würde PISTA Consulting jederzeit wieder empfehlen." - Geschäftsführer Bavaria Heizungstechnik
+"Wir waren bereits erfolgreich, aber PISTA Consulting hat uns gezeigt, wie wir noch besser werden können. Die Kombination aus fundierter Unternehmensanalyse und maßgeschneiderter Odoo-Implementierung war perfekt. Heute haben wir die Systeme und die strategische Klarheit, um unsere Marktführerschaft langfristig auszubauen." - Geschäftsführer Bavaria Heizungstechnik
 
 ## Fazit
 
-Diese Erfolgsgeschichte zeigt, dass auch traditionelle Handwerksbetriebe von der Digitalisierung profitieren können. Mit dem richtigen Partner und der richtigen Lösung können Sie Ihre Effizienz erheblich verbessern.`,
+Bavaria Heizungstechnik zeigt eindrucksvoll: Auch Branchenführer profitieren von strategischer Digitalisierung. Das Unternehmen nutzt seine starke Position nun für weiteres Wachstum – dank moderner Systeme, die Exzellenz skalierbar machen.`,
     author: "PISTA Consulting",
     date: "2025-10-01",
     category: "Erfolgsgeschichten",
     image: "🏁",
-    readTime: 8
+    readTime: 5
   }
 ];
 
