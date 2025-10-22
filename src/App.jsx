@@ -307,26 +307,31 @@ function MainContent() {
               Ihre Erfolgsgeschichte beginnt hier
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-              Unsere Kunden berichten von messbaren Verbesserungen und nachhaltigem Wachstum
+              Sehen Sie, wie junge Unternehmen mit PISTA Consulting von Anfang an durchstarten.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="relative h-64 md:h-auto overflow-hidden rounded-lg shadow-lg">
-              <img src="https://via.placeholder.com/600x400" alt="Bavaria Heizungstechnik" className="w-full h-full object-cover"/>
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <p className="text-white text-2xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Bavaria Heizungstechnik</p>
+          <div className="bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-8">
+            <div className="md:w-1/2">
+              <h3 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                Bavaria Heizungstechnik – Vom Start-up zum Wachstums-Champion
+              </h3>
+              <p className="text-gray-700 text-lg mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                Wie ein junges SHK-Unternehmen durch Odoo von Anfang an die richtigen Weichen stellte und in Rekordzeit auf 45 Mitarbeiter wuchs. Erfahren Sie, wie digitale Prozesse von Tag 1 an ein explosives Wachstum ermöglichten.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="/bavaria-heizungstechnik-case-study.md" target="_blank" className="px-6 py-3 rounded-lg font-semibold text-lg transition-colors duration-300" style={{ backgroundColor: '#FFD700', color: '#1f1f1e', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+                  Detailliertes Fallbeispiel lesen →
+                </a>
+                <a href="/blog/erfolgsgeschichte-bavaria-heizungstechnik" className="px-6 py-3 border-2 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-colors" style={{ borderColor: '#1f1f1e', color: '#1f1f1e', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+                  Erfolgsgeschichte lesen →
+                </a>
               </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <p className="text-gray-700 text-lg mb-6 italic" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                "Dank PISTA Consulting konnten wir unsere Lagerverwaltung um 40% effizienter gestalten und die Lieferzeiten um 25% verkürzen. Eine Investition, die sich mehr als gelohnt hat!"
-              </p>
-              <p className="font-bold text-lg" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-                Max Mustermann, Geschäftsführer
-              </p>
-              <p className="text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                Bavaria Heizungstechnik GmbH
-              </p>
+            <div className="md:w-1/2 relative h-64 md:h-80 overflow-hidden rounded-lg shadow-md">
+              <img src="https://via.placeholder.com/600x400" alt="Bavaria Heizungstechnik" className="w-full h-full object-cover"/>
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <p className="text-white text-2xl font-bold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>45 Mitarbeiter in 3 Jahren</p>
+              </div>
             </div>
           </div>
         </div>
