@@ -3,7 +3,7 @@ import { useState } from 'react'
 import LeadConfigurator from './components/LeadConfigurator';
 import CookieBanner from './components/CookieBanner';
 import PistiChatbot from './components/PistiChatbot';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
 
@@ -130,7 +130,7 @@ function MainContent() {
           <nav className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('problem')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Problem</button>
             <button onClick={() => scrollToSection('solution')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Lösung</button>
-            <a href="/blog" className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Blog</a>
+            <Link to="/blog" className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Blog</Link>
             <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Preise</button>
             <button onClick={() => scrollToSection('configurator')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Konfigurator</button>
             <button onClick={() => scrollToSection('calculator')} className="text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity flex items-center space-x-2" style={{ backgroundColor: '#1f1f1e', fontFamily: 'Gomme Sans Regular, sans-serif' }}>
@@ -263,7 +263,7 @@ function MainContent() {
           </div>
           <div className="relative flex justify-between items-start w-full max-w-4xl mx-auto mb-12">
             <div className="absolute left-0 right-0 h-0.5 bg-red-500" style={{ top: '24px' }}>
-              <div className="absolute left-0 text-3xl animate-race-car" style={{ transform: 'scaleX(-1) translateY(-50%)', top: '0' }}>🏎️</div>
+              <div className="absolute left-0 text-3xl animate-race-car" style={{ transform: 'translateY(-50%)', top: '0' }}>🏎️</div>
             </div>
             <div className="relative z-10 flex flex-col items-center text-center mx-4">
               <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-3">1</div>
@@ -309,9 +309,9 @@ function MainContent() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
               Lesen Sie, wie Unternehmen mit PISTA Consulting ihre digitale Transformation erfolgreich gestaltet haben.
             </p>
-            <a href="/blog" className="inline-block px-8 py-4 text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+            <Link to="/blog" className="inline-block px-8 py-4 text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
               Zum Blog →
-            </a>
+            </Link>
           </div>
           <div style={{ display: 'none' }} className="bg-white p-8 rounded-lg shadow-xl flex flex-col md:flex-row items-center gap-8 transform transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl">
             <div className="md:w-1/2">
