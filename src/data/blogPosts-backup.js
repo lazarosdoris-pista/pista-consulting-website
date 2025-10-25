@@ -51,7 +51,7 @@ Odoo ist die ideale Wahl für Mittelständler, die eine flexible, benutzerfreund
     author: "PISTA Consulting",
     date: "2025-10-15",
     category: "Odoo",
-    image: "/blog-images/odoo-erp-dashboard.jpg",
+    image: "🏆",
     readTime: 5
   },
   {
@@ -120,7 +120,7 @@ Mit der richtigen Planung, Kommunikation und Schulung können Sie diese Fehler v
     author: "PISTA Consulting",
     date: "2025-10-12",
     category: "ERP",
-    image: "/blog-images/erp-implementation-planning.jpg",
+    image: "⚠️",
     readTime: 6
   },
   {
@@ -197,7 +197,7 @@ Die Digitalisierung Ihrer Prozesse ist eine Investition in die Zukunft Ihres Unt
     author: "PISTA Consulting",
     date: "2025-10-10",
     category: "Digitalisierung",
-    image: "/blog-images/digital-transformation.jpg",
+    image: "🚀",
     readTime: 7
   },
   {
@@ -289,7 +289,7 @@ Für die meisten mittelständischen Unternehmen ist Odoo die bessere Wahl. Es bi
     author: "PISTA Consulting",
     date: "2025-10-08",
     category: "Vergleich",
-    image: "/blog-images/erp-comparison.jpg",
+    image: "⚖️",
     readTime: 8
   },
   {
@@ -403,7 +403,7 @@ Mit den richtigen Praktiken und Odoo als Werkzeug können Sie Ihre Lagerverwaltu
     author: "PISTA Consulting",
     date: "2025-10-05",
     category: "Odoo",
-    image: "/blog-images/warehouse-management.jpg",
+    image: "📦",
     readTime: 6
   },
   {
@@ -530,7 +530,7 @@ Bavaria Heizungstechnik zeigt eindrucksvoll: **Der größte Fehler vieler Start-
     author: "PISTA Consulting",
     date: "2025-10-01",
     category: "Erfolgsgeschichten",
-    image: "/blog-images/success-story.jpg",
+    image: "🏁",
     readTime: 5
   },
   {
@@ -653,7 +653,7 @@ Bei PISTA Consulting beraten wir Sie gerne, welche Lösung für Ihr Unternehmen 
     author: "PISTA Consulting",
     date: "2025-09-28",
     category: "Technologie",
-    image: "/blog-images/cloud-computing.jpg",
+    image: "☁️",
     readTime: 7
   },
   {
@@ -798,7 +798,7 @@ Bei PISTA Consulting helfen wir Ihnen, Mobile ERP optimal in Ihrem Unternehmen e
     author: "PISTA Consulting",
     date: "2025-09-25",
     category: "Technologie",
-    image: "/blog-images/mobile-erp.jpg",
+    image: "📱",
     readTime: 6
   },
   {
@@ -1018,7 +1018,7 @@ Bei PISTA Consulting unterstützen wir Sie bei der Auswahl und Implementierung d
     author: "PISTA Consulting",
     date: "2025-09-22",
     category: "E-Commerce",
-    image: "/blog-images/ecommerce-integration.jpg",
+    image: "🛒",
     readTime: 8
   },
   {
@@ -1219,7 +1219,7 @@ Bei PISTA Consulting helfen wir Ihnen, die richtigen Prozesse zu identifizieren 
     author: "PISTA Consulting",
     date: "2025-09-18",
     category: "Automatisierung",
-    image: "/blog-images/automation.jpg",
+    image: "⚙️",
     readTime: 7
   },
   {
@@ -1423,7 +1423,7 @@ Bei PISTA Consulting unterstützen wir Sie bei der DSGVO-konformen Implementieru
     author: "PISTA Consulting",
     date: "2025-09-15",
     category: "Datenschutz",
-    image: "/blog-images/gdpr-compliance.jpg",
+    image: "🔒",
     readTime: 9
   },
   {
@@ -1674,7 +1674,7 @@ Bei PISTA Consulting begleiten wir Sie nicht nur bei der technischen Implementie
     author: "PISTA Consulting",
     date: "2025-09-12",
     category: "Change Management",
-    image: "/blog-images/change-management.jpg",
+    image: "👥",
     readTime: 10
   }
 ];

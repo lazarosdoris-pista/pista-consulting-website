@@ -54,6 +54,17 @@ function BlogPost() {
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
             Zurück zum Blog
           </Link>
+          {/* Hero Image */}
+          {post.image && (
+            <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src={post.image} 
+                alt={post.title}
+                className="w-full h-96 object-cover"
+              />
+            </div>
+          )}
+          
           <h1 className="text-4xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>{post.title}</h1>
           <div className="flex items-center justify-between text-sm text-gray-500 mb-6" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
             <span>Von {post.author}</span>
