@@ -130,7 +130,7 @@ function MainContent() {
           <nav className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('problem')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Problem</button>
             <button onClick={() => scrollToSection('solution')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Lösung</button>
-            <button onClick={() => scrollToSection('success')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Erfolg</button>
+            <a href="/blog" className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Erfolg</a>
             <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Preise</button>
             <button onClick={() => scrollToSection('configurator')} className="text-gray-700 hover:text-gray-900" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Konfigurator</button>
             <button onClick={() => scrollToSection('calculator')} className="text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity flex items-center space-x-2" style={{ backgroundColor: '#1f1f1e', fontFamily: 'Gomme Sans Regular, sans-serif' }}>
@@ -263,7 +263,7 @@ function MainContent() {
           </div>
           <div className="relative flex justify-between items-center w-full max-w-4xl mx-auto mb-12">
             <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-red-500 transform -translate-y-1/2">
-              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 text-3xl animate-race-car">🏎️</div>
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 text-3xl animate-race-car" style={{ transform: 'scaleX(-1)' }}>🏎️</div>
             </div>
             <div className="relative z-10 flex flex-col items-center text-center mx-4">
               <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-3">1</div>
@@ -300,17 +300,20 @@ function MainContent() {
       </section>
 
       {/* Success Section */}
-      <section id="success" className="py-20 px-6 bg-gradient-to-br from-gray-100 to-white">
+      <section id="success" className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-              Ihre Erfolgsgeschichte beginnt hier
+              Erfolgsgeschichten aus der Praxis
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-              Sehen Sie, wie junge Unternehmen mit PISTA Consulting von Anfang an durchstarten.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+              Lesen Sie, wie Unternehmen mit PISTA Consulting ihre digitale Transformation erfolgreich gestaltet haben.
             </p>
+            <a href="/blog" className="inline-block px-8 py-4 text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+              Zum Blog →
+            </a>
           </div>
-          <div className="bg-white p-8 rounded-lg shadow-xl flex flex-col md:flex-row items-center gap-8 transform transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl">
+          <div style={{ display: 'none' }} className="bg-white p-8 rounded-lg shadow-xl flex flex-col md:flex-row items-center gap-8 transform transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl">
             <div className="md:w-1/2">
               <h3 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
                 <span className="text-red-600">🚀</span> Bavaria Heizungstechnik – Vom Start-up zum Wachstums-Champion
