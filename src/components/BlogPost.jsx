@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { blogPosts } from '../data/blogPosts';
 import CookieBanner from './CookieBanner';
 import PistiChatbot from './PistiChatbot';
+import ReactMarkdown from 'react-markdown';
 
 function BlogPost() {
   const { slug } = useParams();
@@ -59,9 +60,19 @@ function BlogPost() {
             <span>{post.date}</span>
             <span>{post.readTime} Min. Lesezeit</span>
           </div>
-          <div className="prose max-w-none" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-            {/* Render HTML content from post.content */}
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          <div className="prose prose-lg max-w-none" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+            <ReactMarkdown
+              components={{
+                h2: ({node, ...props}) => <h2 className="text-2xl font-bold mt-8 mb-4" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }} {...props} />,
+                h3: ({node, ...props}) => <h3 className="text-xl font-bold mt-6 mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }} {...props} />,
+                p: ({node, ...props}) => <p className="mb-4 text-gray-700 leading-relaxed text-lg" {...props} />,
+                ul: ({node, ...props}) => <ul className="list-disc ml-6 mb-6 space-y-2" {...props} />,
+                li: ({node, ...props}) => <li className="text-gray-700" {...props} />,
+                strong: ({node, ...props}) => <strong className="font-semibold text-gray-900" {...props} />,
+              }}
+            >
+              {post.content}
+            </ReactMarkdown>
           </div>
         </div>
       </section>
