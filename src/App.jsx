@@ -261,9 +261,9 @@ function MainContent() {
               Wie auf einer perfekt geplanten Rennstrecke fahren wir Sie mit maximaler Geschwindigkeit und Präzision zum Ziel
             </p>
           </div>
-          <div className="relative flex justify-between items-center w-full max-w-4xl mx-auto mb-12">
-            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-red-500 transform -translate-y-1/2">
-              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 text-3xl animate-race-car" style={{ transform: 'scaleX(-1)' }}>🏎️</div>
+          <div className="relative flex justify-between items-start w-full max-w-4xl mx-auto mb-12">
+            <div className="absolute left-0 right-0 h-0.5 bg-red-500" style={{ top: '24px' }}>
+              <div className="absolute left-0 text-3xl animate-race-car" style={{ transform: 'scaleX(-1) translateY(-50%)', top: '0' }}>🏎️</div>
             </div>
             <div className="relative z-10 flex flex-col items-center text-center mx-4">
               <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-3">1</div>
