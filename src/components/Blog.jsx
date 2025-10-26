@@ -38,8 +38,8 @@ function Blog() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {blogPosts.map(post => (
               <div key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
                 <div className="p-6 flex-grow">
-                  <div className="text-4xl mb-4 text-center">{post.image}</div>
                   <h2 className="text-2xl font-bold mb-3" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>{post.title}</h2>
                   <p className="text-gray-600 mb-4" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>{post.excerpt}</p>
                   <div className="flex items-center justify-between text-sm text-gray-500" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
