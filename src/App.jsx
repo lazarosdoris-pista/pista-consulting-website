@@ -332,18 +332,22 @@ function MainContent() {
               
               {/* Key Metrics */}
               <div className="md:w-2/3">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="bg-white p-4 rounded-xl shadow-md text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>+48%</div>
-                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Umsatzwachstum</div>
+                    <div className="text-3xl font-bold text-green-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>27,6%</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Umsatzrendite</div>
                   </div>
                   <div className="bg-white p-4 rounded-xl shadow-md text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>100%</div>
-                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Digitalisierung</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>16,3%</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Personalkosten</div>
                   </div>
                   <div className="bg-white p-4 rounded-xl shadow-md text-center">
-                    <div className="text-3xl font-bold text-purple-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>0</div>
-                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Migrationen</div>
+                    <div className="text-3xl font-bold text-orange-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>+48%</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Wachstum</div>
+                  </div>
+                  <div className="bg-white p-4 rounded-xl shadow-md text-center">
+                    <div className="text-3xl font-bold text-purple-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>148%</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>über Branche</div>
                   </div>
                 </div>
                 
