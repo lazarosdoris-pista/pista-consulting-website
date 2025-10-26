@@ -83,7 +83,7 @@ const LeadConfigurator = () => {
       };
 
       // Send to backend API
-      const response = await fetch('/api/send-lead', {
+      const response = await fetch('http://localhost:3001/api/send-lead', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
