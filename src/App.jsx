@@ -263,7 +263,7 @@ function MainContent() {
           </div>
           <div className="relative flex justify-between items-start w-full max-w-4xl mx-auto mb-12">
             <div className="absolute left-0 right-0 h-0.5 bg-red-500" style={{ top: '24px' }}>
-              <div className="absolute left-0 text-3xl animate-race-car" style={{ transform: 'translateY(-50%)', top: '0' }}>
+              <div className="absolute left-0 text-3xl animate-race-car" style={{ transform: 'translateY(-50%)', top: '50%' }}>
                 <span style={{ display: 'inline-block', transform: 'scaleX(-1)' }}>🏎️</span>
               </div>
             </div>
