@@ -330,28 +330,85 @@ function MainContent() {
                 </div>
               </div>
               
-              {/* Key Metrics */}
+              {/* Key Metrics with Industry Comparison */}
               <div className="md:w-2/3">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="bg-white p-4 rounded-xl shadow-md text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>27,6%</div>
-                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Umsatzrendite</div>
-                  </div>
-                  <div className="bg-white p-4 rounded-xl shadow-md text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>16,3%</div>
-                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Personalkosten</div>
-                  </div>
-                  <div className="bg-white p-4 rounded-xl shadow-md text-center">
-                    <div className="text-3xl font-bold text-orange-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>+48%</div>
-                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Wachstum</div>
-                  </div>
-                  <div className="bg-white p-4 rounded-xl shadow-md text-center">
-                    <div className="text-3xl font-bold text-purple-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>148%</div>
-                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>über Branche</div>
+                <div className="mb-6">
+                  <h4 className="text-lg font-bold mb-4 text-center" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                    🏆 Der Odoo-Vorteil im Vergleich zur Branche
+                  </h4>
+                  
+                  {/* Comparison Cards */}
+                  <div className="space-y-3">
+                    {/* Profit Margin Comparison */}
+                    <div className="bg-white p-4 rounded-xl shadow-md">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-sm font-semibold text-gray-700" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Umsatzrendite</span>
+                        <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">+148% besser</span>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="flex-1">
+                          <div className="flex justify-between items-center mb-1">
+                            <span className="text-xs text-gray-500">Branche</span>
+                            <span className="text-sm font-bold text-gray-400">~11%</span>
+                          </div>
+                          <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div className="h-full bg-gray-400" style={{ width: '40%' }}></div>
+                          </div>
+                        </div>
+                        <div className="text-2xl text-gray-300">→</div>
+                        <div className="flex-1">
+                          <div className="flex justify-between items-center mb-1">
+                            <span className="text-xs font-semibold text-green-700">Mit Odoo</span>
+                            <span className="text-sm font-bold text-green-600">27,6%</span>
+                          </div>
+                          <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div className="h-full bg-green-500" style={{ width: '100%' }}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Personnel Cost Comparison */}
+                    <div className="bg-white p-4 rounded-xl shadow-md">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-sm font-semibold text-gray-700" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>Personalkosten</span>
+                        <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-semibold">-49% niedriger</span>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="flex-1">
+                          <div className="flex justify-between items-center mb-1">
+                            <span className="text-xs text-gray-500">Branche</span>
+                            <span className="text-sm font-bold text-gray-400">32%</span>
+                          </div>
+                          <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div className="h-full bg-gray-400" style={{ width: '100%' }}></div>
+                          </div>
+                        </div>
+                        <div className="text-2xl text-gray-300">→</div>
+                        <div className="flex-1">
+                          <div className="flex justify-between items-center mb-1">
+                            <span className="text-xs font-semibold text-blue-700">Mit Odoo</span>
+                            <span className="text-sm font-bold text-blue-600">16,3%</span>
+                          </div>
+                          <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div className="h-full bg-blue-500" style={{ width: '51%' }}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Growth Badge */}
+                    <div className="bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-xl border-l-4 border-orange-500 flex items-center justify-between">
+                      <div>
+                        <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Umsatzwachstum in 18 Monaten</div>
+                        <div className="text-2xl font-bold text-orange-600" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>+48%</div>
+                      </div>
+                      <div className="text-4xl">🚀</div>
+                    </div>
                   </div>
                 </div>
                 
-                <div className="mt-6 p-4 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border-l-4 border-red-500">
+                <div className="mt-4 p-4 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border-l-4 border-red-500">
                   <p className="text-gray-700 italic" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
                     "Mit Odoo von Anfang an professionell aufgestellt – kein Excel-Chaos, keine späteren Migrationen. Das war der Schlüssel zu unserem schnellen Wachstum."
                   </p>
