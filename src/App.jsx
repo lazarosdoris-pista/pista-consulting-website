@@ -409,11 +409,11 @@ function MainContent() {
                 </div>
                 
                 <div className="mt-4 p-4 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border-l-4 border-red-500">
-                  <p className="text-gray-700 italic" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                    "Mit Odoo von Anfang an professionell aufgestellt – kein Excel-Chaos, keine späteren Migrationen. Das war der Schlüssel zu unserem schnellen Wachstum."
+                  <p className="text-gray-700 italic leading-relaxed" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                    "Früher hätte ich Stunden im Büro verbracht – Angebote schreiben, Rechnungen erstellen, Lagerbestände prüfen. Heute erledigt Odoo das automatisch. Ich kann mich endlich auf das konzentrieren, was ich am besten kann: Auf der Baustelle sein und für meine Kunden da sein. Die Verwaltung läuft im Hintergrund wie von selbst – kein Excel-Chaos, keine Zettelwirtschaft, keine verlorene Zeit. Das ist der wahre Unterschied."
                   </p>
-                  <p className="text-sm text-gray-600 mt-2 font-semibold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>
-                    — Geschäftsführung Bavaria Heizungstechnik
+                  <p className="text-sm text-gray-600 mt-3 font-semibold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+                    — Zoran Pozderovic, Geschäftsführer Bavaria Heizungstechnik
                   </p>
                 </div>
                 
