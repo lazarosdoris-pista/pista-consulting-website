@@ -6,6 +6,8 @@ import PistiChatbot from './components/PistiChatbot';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
+import ImprintPage from './pages/ImprintPage';
+import PrivacyPage from './pages/PrivacyPage';
 
 function MainContent() {
   const [employees, setEmployees] = useState(50)
@@ -680,6 +682,8 @@ function App() {
         <Route path="/" element={<MainContent />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/imprint" element={<ImprintPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
       </Routes>
     </Router>
   );
