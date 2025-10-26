@@ -410,7 +410,7 @@ function MainContent() {
                 
                 <div className="mt-4 p-4 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border-l-4 border-red-500">
                   <p className="text-gray-700 italic leading-relaxed" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-                    "Früher saß ich abends noch am Schreibtisch – Angebote tippen, Rechnungen schreiben, Excel-Listen pflegen. Heute macht Odoo das alles automatisch. Ich bin wieder da, wo ich hingehöre: Bei meinen Kunden auf der Baustelle. Das ist unbezahlbar."
+                    "Odoo war die beste Entscheidung für unser Wachstum. Mein Team arbeitet effizienter, wir haben alle Zahlen in Echtzeit im Blick, und neue Mitarbeiter sind in Tagen produktiv. Kein Excel-Chaos mehr, keine Doppelarbeit. Wir können skalieren, ohne dass die Verwaltung explodiert. Das ist der Unterschied zwischen Wachstum und Chaos."
                   </p>
                   <p className="text-sm text-gray-600 mt-3 font-semibold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>
                     — Zoran Pozderovic, Geschäftsführer Bavaria Heizungstechnik
