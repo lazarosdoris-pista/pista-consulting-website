@@ -306,14 +306,68 @@ function MainContent() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
-              Erfolgsgeschichten aus der Praxis
+              Erfolgsgeschichte aus der Praxis
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
-              Lesen Sie, wie Unternehmen mit PISTA Consulting ihre digitale Transformation erfolgreich gestaltet haben.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+              Wie Bavaria Heizungstechnik mit PISTA Consulting durchstartete
             </p>
-            <Link to="/blog" className="inline-block px-8 py-4 text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity" style={{ backgroundColor: '#E4002B', fontFamily: 'Gomme Sans Bold, sans-serif' }}>
-              Zum Blog →
-            </Link>
+          </div>
+          
+          {/* Bavaria Heizungstechnik Reference Card */}
+          <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-xl border border-gray-100">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              {/* Company Info */}
+              <div className="md:w-1/3">
+                <div className="text-5xl mb-4">🏁</div>
+                <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Gomme Sans Bold, sans-serif', color: '#1f1f1e' }}>
+                  Bavaria Heizungstechnik GmbH
+                </h3>
+                <p className="text-gray-600 mb-4" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                  SHK-Handwerk | München
+                </p>
+                <div className="inline-block px-4 py-2 bg-red-100 text-red-600 rounded-full text-sm font-semibold">
+                  Start-up → Wachstums-Champion
+                </div>
+              </div>
+              
+              {/* Key Metrics */}
+              <div className="md:w-2/3">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="bg-white p-4 rounded-xl shadow-md text-center">
+                    <div className="text-3xl font-bold text-red-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>217k€</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Umsatz</div>
+                  </div>
+                  <div className="bg-white p-4 rounded-xl shadow-md text-center">
+                    <div className="text-3xl font-bold text-green-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>+48%</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Wachstum</div>
+                  </div>
+                  <div className="bg-white p-4 rounded-xl shadow-md text-center">
+                    <div className="text-3xl font-bold text-blue-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>85</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Projekte</div>
+                  </div>
+                  <div className="bg-white p-4 rounded-xl shadow-md text-center">
+                    <div className="text-3xl font-bold text-purple-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>15</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Mitarbeiter</div>
+                  </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border-l-4 border-red-500">
+                  <p className="text-gray-700 italic" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>
+                    "Mit Odoo von Anfang an professionell aufgestellt – kein Excel-Chaos, keine späteren Migrationen. Das war der Schlüssel zu unserem schnellen Wachstum."
+                  </p>
+                  <p className="text-sm text-gray-600 mt-2 font-semibold" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>
+                    — Geschäftsführung Bavaria Heizungstechnik
+                  </p>
+                </div>
+                
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-semibold">Odoo ERP</span>
+                  <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">CRM & Vertrieb</span>
+                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">Lager & Einkauf</span>
+                  <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">Finanzen</span>
+                </div>
+              </div>
+            </div>
           </div>
           <div style={{ display: 'none' }} className="bg-white p-8 rounded-lg shadow-xl flex flex-col md:flex-row items-center gap-8 transform transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl">
             <div className="md:w-1/2">
