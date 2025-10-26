@@ -332,22 +332,18 @@ function MainContent() {
               
               {/* Key Metrics */}
               <div className="md:w-2/3">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="bg-white p-4 rounded-xl shadow-md text-center">
-                    <div className="text-3xl font-bold text-red-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>217k€</div>
-                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Umsatz</div>
-                  </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   <div className="bg-white p-4 rounded-xl shadow-md text-center">
                     <div className="text-3xl font-bold text-green-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>+48%</div>
-                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Wachstum</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Umsatzwachstum</div>
                   </div>
                   <div className="bg-white p-4 rounded-xl shadow-md text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>85</div>
-                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Projekte</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>100%</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Digitalisierung</div>
                   </div>
                   <div className="bg-white p-4 rounded-xl shadow-md text-center">
-                    <div className="text-3xl font-bold text-purple-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>15</div>
-                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Mitarbeiter</div>
+                    <div className="text-3xl font-bold text-purple-600 mb-1" style={{ fontFamily: 'Gomme Sans Bold, sans-serif' }}>0</div>
+                    <div className="text-sm text-gray-600" style={{ fontFamily: 'Gomme Sans Regular, sans-serif' }}>Migrationen</div>
                   </div>
                 </div>
                 
